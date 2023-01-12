@@ -9,7 +9,8 @@ public class PawnController : MonoBehaviour
     private bool objectSelect;
     [SerializeField]
     private int selectObjectEixoY;
-    private bool test;
+    private bool checkSelect;
+    private bool isMouseInside;
 
 
     // Start is called before the first frame update
@@ -17,7 +18,8 @@ public class PawnController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         objectSelect = false;
-        test = true;
+        checkSelect = false;
+        isMouseInside = false;
 
     }
 
@@ -30,25 +32,36 @@ public class PawnController : MonoBehaviour
         {
             rb.position = new Vector3(rb.position.x, selectObjectEixoY, rb.position.z);
             rb.useGravity = false;
-            test = false;
+            checkSelect = false;
         }
         if (objectSelect == false)
         {
             rb.useGravity = true;
-            test = true;
+            checkSelect = true;
         }
     }
 
     private void testSelect()
     {
-        if (Input.GetMouseButtonDown(0) && test == true)
+        if (Input.GetMouseButtonDown(0) && checkSelect && isMouseInside)
         {
             objectSelect = true;
         }
 
-        if (Input.GetMouseButtonDown(0) && test == false)
+        if (Input.GetMouseButtonDown(0) && !checkSelect && !isMouseInside)
         {
             objectSelect = false;
         }
     }
+
+    private void OnMouseEnter()
+    {
+        isMouseInside = true;
+    }
+
+    private void OnMouseExit()
+    {
+        isMouseInside = false;
+    }
+
 }

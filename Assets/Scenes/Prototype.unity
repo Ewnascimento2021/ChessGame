@@ -292,13 +292,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744519251}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 4.5, y: 8, z: 0}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 4.5, y: 5.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!1 &1534272612
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +331,12 @@ MonoBehaviour:
   blackHouse: {fileID: 7651959443194930378, guid: 8ddf618e40bf9c04ca0a6a98f6674858, type: 3}
   whiteHouse: {fileID: 3858134903643411340, guid: 4756273a49ca2e44d917ea3c81ef7114, type: 3}
   target: {fileID: 1534272614}
+  PawnWhite: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+  RookWhite: {fileID: 0}
+  KnightWhite: {fileID: 0}
+  BishopWhite: {fileID: 0}
+  QueenWhite: {fileID: 0}
+  KingWhite: {fileID: 0}
 --- !u!4 &1534272614
 Transform:
   m_ObjectHideFlags: 0

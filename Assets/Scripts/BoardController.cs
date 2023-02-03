@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateTable : MonoBehaviour
+public class BoardController : MonoBehaviour
 {
     [SerializeField]
     private GameObject blackHouse;
@@ -12,6 +12,31 @@ public class CreateTable : MonoBehaviour
 
     [SerializeField]
     private Transform target;
+
+    [SerializeField]
+    private GameObject PawnWhite;
+
+    [SerializeField]
+    private GameObject RookWhite;
+
+    [SerializeField]
+    private GameObject KnightWhite;
+
+    [SerializeField]
+    private GameObject BishopWhite;
+
+    [SerializeField]
+    private GameObject QueenWhite;
+
+    [SerializeField]
+    private GameObject KingWhite;
+
+
+
+
+
+
+
 
     private GameObject[,] board;
 
@@ -23,6 +48,7 @@ public class CreateTable : MonoBehaviour
         board = new GameObject[8, 8];
 
         GenerateGrid();
+        CreatePiece();
     }
 
     void GenerateGrid()
@@ -38,15 +64,28 @@ public class CreateTable : MonoBehaviour
                 if ((x + z) % 2 == 0)
                 {
                     board[x, z] = Instantiate(blackHouse, target.position, target.rotation);
+                    board[x, z].GetComponent<HousesBehaviour>().isWhite = false;
                 }
                 else
                 {
                     board[x, z] = Instantiate(whiteHouse, target.position, target.rotation);
+                    board[x, z].GetComponent<HousesBehaviour>().isWhite = true;
                 }
 
-                board[x,z].name = $"Tile {x} {z}";
-
+                board[x, z].name = $"Tile {x} {z}";
             }
         }
     }
+
+    void CreatePiece()
+    {
+        for (int x = 0; x < 8; x++)
+        {
+            target.position = new Vector3(initPosX + x, 0.2f, initPosZ + 1);
+
+            board[1, x] = Instantiate(PawnWhite,target.position, target.rotation);
+        }
+
+    }
 }
+

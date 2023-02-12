@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7792867358835184407}
   - component: {fileID: 4453427733347276869}
   - component: {fileID: -7246624287247607153}
+  - component: {fileID: -6806818485196396291}
   m_Layer: 0
   m_Name: Black House
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWhite: 0
   typePiece: Empty
+--- !u!114 &-6806818485196396291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651959443194930378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3549a04944780eb48a4d4a960c5960b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseSelect: 0
+  house: {fileID: 7911433114511437470}

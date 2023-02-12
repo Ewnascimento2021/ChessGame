@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8712966882945142118}
   - component: {fileID: 553665873874306511}
   - component: {fileID: 9016483810038692819}
+  - component: {fileID: -5144504804290586915}
   m_Layer: 0
   m_Name: White House
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWhite: 0
   typePiece: Empty
+--- !u!114 &-5144504804290586915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858134903643411340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3549a04944780eb48a4d4a960c5960b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseSelect: 0
+  house: {fileID: 2685137360032239804}

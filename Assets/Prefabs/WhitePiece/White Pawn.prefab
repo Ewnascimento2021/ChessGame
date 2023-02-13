@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1451296412596396707}
   m_Layer: 0
   m_Name: White Pawn
-  m_TagString: PawnWhite
+  m_TagString: WhitePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,19 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - House
-  - PawnWhite
-  - RookWhite
-  - KnightWhite
-  - BishopWhite
-  - QueenWhite
-  - KingWhite
-  - PawnBlack
-  - RookBlack
-  - KnightBlack
-  - BishopBlack
-  - QueenBlack
-  - KingBlack
+  - BlackPiece
+  - WhitePiece
   layers:
   - Default
   - TransparentFX

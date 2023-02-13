@@ -48,7 +48,7 @@ public class HousesBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-            typePiece = other.gameObject.tag;
+        typePiece = other.gameObject.tag;
     }
     private void OnCollisionExit(Collision other)
     {

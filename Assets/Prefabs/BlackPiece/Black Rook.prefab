@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9166326392689781795}
   m_Layer: 0
   m_Name: Black Rook
-  m_TagString: RookBlack
+  m_TagString: BlackPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

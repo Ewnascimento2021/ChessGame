@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8185364165909993633}
   m_Layer: 0
   m_Name: White Knight
-  m_TagString: KnightWhite
+  m_TagString: WhitePiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

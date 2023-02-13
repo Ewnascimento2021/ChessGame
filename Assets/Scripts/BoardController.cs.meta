@@ -3,7 +3,22 @@ guid: 48b077d50475e094f856d96d5026792a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - blackHouse: {instanceID: 0}
+  - whiteHouse: {instanceID: 0}
+  - target: {instanceID: 0}
+  - PawnWhite: {instanceID: 0}
+  - RookWhite: {instanceID: 0}
+  - KnightWhite: {instanceID: 0}
+  - BishopWhite: {instanceID: 0}
+  - QueenWhite: {instanceID: 0}
+  - KingWhite: {instanceID: 0}
+  - PawnBlack: {instanceID: 0}
+  - RookBlack: {instanceID: 0}
+  - KnightBlack: {instanceID: 0}
+  - BishopBlack: {instanceID: 0}
+  - QueenBlack: {instanceID: 0}
+  - KingBlack: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

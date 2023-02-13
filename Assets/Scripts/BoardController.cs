@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BoardController : MonoBehaviour
 {
+
+    [SerializeField]
+    private Transform target;
     [SerializeField]
     private GameObject blackHouse;
     [SerializeField]
     private GameObject whiteHouse;
-    [SerializeField]
-    private Transform target;
     [SerializeField]
     private GameObject PawnWhite;
     [SerializeField]
@@ -35,13 +36,6 @@ public class BoardController : MonoBehaviour
     [SerializeField]
     private GameObject KingBlack;
 
-
-
-
-
-
-
-
     private GameObject[,] board;
 
     private float initPosX = 1.0f;
@@ -52,6 +46,7 @@ public class BoardController : MonoBehaviour
         board = new GameObject[8, 8];
 
         GenerateGrid();
+        ReferenceController.Instance.board = board;
         CreatePiece();
     }
 
@@ -119,7 +114,7 @@ public class BoardController : MonoBehaviour
         // Create King White
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ);
         Instantiate(KingWhite, target.position, target.rotation);
-
+        
 
 
 
@@ -157,12 +152,6 @@ public class BoardController : MonoBehaviour
         // Create King Black
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ + 7);
         Instantiate(KingBlack, target.position, target.rotation);
-
-
-
-
-
-
     }
 }
 

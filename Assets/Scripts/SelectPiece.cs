@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class SelectPiece : MonoBehaviour
 {
-    public bool selectPiece;
-    private bool mouseEnter;
 
     [SerializeField]
     private GameObject pieceType;
 
+    public bool selectPiece;
+    private bool mouseEnter;
+    private bool iAmSelected;
+    private float xPos;
+    private float zPos;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        selectPiece = false;
+        mouseEnter = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         SelectedPiece();
@@ -29,17 +30,25 @@ public class SelectPiece : MonoBehaviour
         if (mouseEnter && Input.GetMouseButtonDown(0))
         {
             selectPiece = true;
-            Debug.Log(selectPiece);
+            xPos = transform.position.x;
+            zPos = transform.position.z;
+            ReferenceController.Instance.IsPieceSelected = true;
+            iAmSelected= true;
         }
 
-        else if (!mouseEnter && selectPiece && Input.GetMouseButtonDown(0) && GetComponent<HouseCheck>().houseSelect == true)
+
+        else if (!mouseEnter && ReferenceController.Instance.IsHouseSelected && iAmSelected)
         {
-            transform.position = GetComponent<HouseCheck>().house.position;
+
+            transform.position = new Vector3(ReferenceController.Instance.housePosX, transform.position.y, ReferenceController.Instance.housePosZ);
+            iAmSelected= false;
+            ReferenceController.Instance.IsPieceSelected = false;
+            ReferenceController.Instance.IsHouseSelected = false;
+
         }
         else
         {
             selectPiece = false;
-            Debug.Log(selectPiece);
         }
     }
 

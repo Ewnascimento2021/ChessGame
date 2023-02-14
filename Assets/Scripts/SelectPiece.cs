@@ -8,12 +8,10 @@ public class SelectPiece : MonoBehaviour
     [SerializeField]
     private GameObject pieceType;
 
-    public bool selectPiece;
     private bool mouseEnter;
     private bool iAmSelected;
-    private float xPos;
-    private float zPos;
     public bool isWhite;
+    public bool selectPiece;
 
     private void Start()
     {
@@ -28,21 +26,34 @@ public class SelectPiece : MonoBehaviour
 
     private void SelectedPiece()
     {
-        if (mouseEnter && Input.GetMouseButtonDown(0))
+        if (isWhite && ReferenceController.Instance.BlackOrWhite)
         {
-            selectPiece = true;
-            xPos = transform.position.x;
-            zPos = transform.position.z;
-            ReferenceController.Instance.IsPieceSelected = true;
-            iAmSelected= true;
+            if (mouseEnter && Input.GetMouseButtonDown(0))
+            {
+                selectPiece = true;
+                ReferenceController.Instance.IsPieceSelected = true;
+                iAmSelected = true;
+                ReferenceController.Instance.BlackOrWhite = false;
+            }
         }
 
+        else if (!isWhite && !ReferenceController.Instance.BlackOrWhite)
+        {
+            if (mouseEnter && Input.GetMouseButtonDown(0))
+            {
+                selectPiece = true;
+                ReferenceController.Instance.IsPieceSelected = true;
+                iAmSelected = true;
+                ReferenceController.Instance.BlackOrWhite = true;
+            }
+        }
+          
 
         else if (!mouseEnter && ReferenceController.Instance.IsHouseSelected && iAmSelected)
         {
 
             transform.position = new Vector3(ReferenceController.Instance.housePosX, transform.position.y, ReferenceController.Instance.housePosZ);
-            iAmSelected= false;
+            iAmSelected = false;
             ReferenceController.Instance.IsPieceSelected = false;
             ReferenceController.Instance.IsHouseSelected = false;
 

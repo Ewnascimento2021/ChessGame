@@ -15,14 +15,29 @@ public class ReferenceController : MonoBehaviour
         }
     }
 
-    private bool isPieceSelected;
-
-    private bool isHouseSelected;
-    public bool IsPieceSelected { get => isPieceSelected; set => isPieceSelected = value; }
-    public bool IsHouseSelected { get => isHouseSelected; set => isHouseSelected = value; }
-
+    public GameObject[,] board;
     public float housePosX;
     public float housePosZ;
-    public GameObject[,] board;
+
+
+    private void Start()
+    {
+        blackOrWhite = true;
+    }
+
+
+    private bool isPieceSelected;
+    public bool IsPieceSelected { get => isPieceSelected; set => isPieceSelected = value; }
+
+
+    private bool isHouseSelected;
+    public bool IsHouseSelected { get => isHouseSelected; set => isHouseSelected = value; }
+
+
+    private bool blackOrWhite;
+    public bool BlackOrWhite { get => blackOrWhite; set => blackOrWhite = value; }
+
+   
+    
 
 }

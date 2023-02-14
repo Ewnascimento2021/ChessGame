@@ -25,26 +25,4 @@ public class ReferenceController : MonoBehaviour
     public float housePosZ;
     public GameObject[,] board;
 
-
-    void Start()
-    {
-
-    }
-
-
-    void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    board[2, 2].gameObject.GetComponent<HousesBehaviour>().typePiece = "Flyngons";
-        //    Debug.Log(board[2, 2].gameObject.GetComponent<HousesBehaviour>().typePiece);
-        //}
-        
-    }
-
-   
-   
-
-
-
 }

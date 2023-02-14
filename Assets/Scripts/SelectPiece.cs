@@ -13,6 +13,7 @@ public class SelectPiece : MonoBehaviour
     private bool iAmSelected;
     private float xPos;
     private float zPos;
+    public bool isWhite;
 
     private void Start()
     {

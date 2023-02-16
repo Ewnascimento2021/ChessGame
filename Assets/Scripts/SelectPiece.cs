@@ -11,58 +11,46 @@ public class SelectPiece : MonoBehaviour
     private bool mouseEnter;
     private bool iAmSelected;
     public bool isWhite;
-    public bool selectPiece;
+
 
     private void Start()
     {
-        selectPiece = false;
+
         mouseEnter = false;
     }
 
     void Update()
     {
-        SelectedPiece();
+        if (isWhite && ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
+        {
+            SelectedPiece();
+        }
+        else if (!isWhite && !ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
+        {
+            SelectedPiece();
+        }
+
+        if (!mouseEnter && ReferenceController.Instance.IsHouseSelected && iAmSelected)
+        {
+            MovePieceSelected();
+        }
     }
 
     private void SelectedPiece()
     {
-        if (isWhite && ReferenceController.Instance.BlackOrWhite)
-        {
-            if (mouseEnter && Input.GetMouseButtonDown(0))
-            {
-                selectPiece = true;
-                ReferenceController.Instance.IsPieceSelected = true;
-                iAmSelected = true;
-                ReferenceController.Instance.BlackOrWhite = false;
-            }
-        }
-
-        else if (!isWhite && !ReferenceController.Instance.BlackOrWhite)
-        {
-            if (mouseEnter && Input.GetMouseButtonDown(0))
-            {
-                selectPiece = true;
-                ReferenceController.Instance.IsPieceSelected = true;
-                iAmSelected = true;
-                ReferenceController.Instance.BlackOrWhite = true;
-            }
-        }
-          
-
-        else if (!mouseEnter && ReferenceController.Instance.IsHouseSelected && iAmSelected)
-        {
-
-            transform.position = new Vector3(ReferenceController.Instance.housePosX, transform.position.y, ReferenceController.Instance.housePosZ);
-            iAmSelected = false;
-            ReferenceController.Instance.IsPieceSelected = false;
-            ReferenceController.Instance.IsHouseSelected = false;
-
-        }
-        else
-        {
-            selectPiece = false;
-        }
+        iAmSelected = true;
+        ReferenceController.Instance.IsPieceSelected = true;
+        ReferenceController.Instance.BlackOrWhite = !ReferenceController.Instance.BlackOrWhite;
     }
+
+    private void MovePieceSelected()
+    {
+        transform.position = new Vector3(ReferenceController.Instance.housePosX, transform.position.y, ReferenceController.Instance.housePosZ);
+        iAmSelected = false;
+        ReferenceController.Instance.IsPieceSelected = false;
+        ReferenceController.Instance.IsHouseSelected = false;
+    }
+
 
     private void OnMouseEnter()
     {

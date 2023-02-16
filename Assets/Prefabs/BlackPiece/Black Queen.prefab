@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3386720}
   - component: {fileID: 2338298}
   - component: {fileID: 7231396130417369820}
-  - component: {fileID: 4526081822205235005}
   - component: {fileID: 305589822208578839}
+  - component: {fileID: 1647376928483385992}
   m_Layer: 0
   m_Name: Black Queen
   m_TagString: BlackPiece
@@ -97,20 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 184594}
+  isWhite: 0
   selectPiece: 0
---- !u!65 &4526081822205235005
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3331149, y: 3.028268, z: 1.3128619}
-  m_Center: {x: 0.00000032782555, y: 1.3419029, z: 0.020409167}
 --- !u!54 &305589822208578839
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +115,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &1647376928483385992
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 3.35
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.04, z: 0}

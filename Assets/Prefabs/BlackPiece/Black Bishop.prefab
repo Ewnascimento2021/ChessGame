@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3339302}
   - component: {fileID: 2398162}
   - component: {fileID: 5566917031078686730}
-  - component: {fileID: -1555637147638814727}
   - component: {fileID: -7167159758603671080}
+  - component: {fileID: 6662985767578304146}
   m_Layer: 0
   m_Name: Black Bishop
   m_TagString: Undefined
@@ -97,20 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 196866}
+  isWhite: 0
   selectPiece: 0
---- !u!65 &-1555637147638814727
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196866}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1612562, y: 2.5846941, z: 1.1436143}
-  m_Center: {x: 0.00000017881393, y: 1.1201159, z: 0.017778158}
 --- !u!54 &-7167159758603671080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +115,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &6662985767578304146
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.36
+  m_Height: 2.79
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.97, z: 0}

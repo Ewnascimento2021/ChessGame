@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3387380}
   - component: {fileID: 2369410}
   - component: {fileID: -5200604740381584511}
-  - component: {fileID: -8448180217472687825}
   - component: {fileID: 9166326392689781795}
+  - component: {fileID: 5548235583733527975}
   m_Layer: 0
   m_Name: Black Rook
   m_TagString: BlackPiece
@@ -97,20 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 125018}
+  isWhite: 0
   selectPiece: 0
---- !u!65 &-8448180217472687825
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125018}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0688708, y: 1.8515171, z: 1.0526323}
-  m_Center: {x: 0.00000014901161, y: 0.75352746, z: 0.016364753}
 --- !u!54 &9166326392689781795
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +115,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &5548235583733527975
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.33
+  m_Height: 2.35
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.59, z: 0}

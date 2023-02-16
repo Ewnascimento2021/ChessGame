@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3304258}
   - component: {fileID: 2374884}
   - component: {fileID: 1367873857723483173}
-  - component: {fileID: 6298693368323987815}
   - component: {fileID: -9120763958861725865}
+  - component: {fileID: 3154292981193349185}
   m_Layer: 0
   m_Name: Black Knight
   m_TagString: BlackPiece
@@ -97,20 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 196802}
+  isWhite: 0
   selectPiece: 0
---- !u!65 &6298693368323987815
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196802}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0526323, y: 2.304227, z: 1.0904684}
-  m_Center: {x: -0.016363293, y: 0.97988236, z: 0}
 --- !u!54 &-9120763958861725865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +115,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &3154292981193349185
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 2.47
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.77, z: 0}

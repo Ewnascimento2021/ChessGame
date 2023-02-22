@@ -97,8 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 138226}
+  iAmSelected: 0
   isWhite: 0
-  selectPiece: 0
+  myX: 0
+  myZ: 0
 --- !u!54 &-5225264180388271335
 Rigidbody:
   m_ObjectHideFlags: 0

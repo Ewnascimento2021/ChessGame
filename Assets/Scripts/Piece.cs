@@ -31,7 +31,7 @@ public class Piece : MonoBehaviour
             SelectedPiece();
         }
 
-        if (!mouseEnter && ReferenceController.Instance.IsHouseSelected && iAmSelected)
+        if (ReferenceController.Instance.IsHouseSelected && iAmSelected)
         {
             MovePieceSelected();
         }

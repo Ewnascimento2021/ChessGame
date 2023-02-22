@@ -5,9 +5,9 @@ using UnityEngine;
 public class HousesBehaviour : MonoBehaviour
 {
     public bool isWhite;
-    public string typePiece = "Empty";
+    public string colorPiece = "Empty";
     private bool houseEnter;
-
+    public GameObject myPiece = null;
 
     public Transform house;
 
@@ -48,10 +48,12 @@ public class HousesBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        typePiece = other.gameObject.tag;
+        colorPiece = other.gameObject.tag;
+        myPiece = other.gameObject;
     }
     private void OnCollisionExit(Collision other)
     {
-        typePiece = "Empty";
+        colorPiece = "Empty";
+        myPiece = null;
     }
 }

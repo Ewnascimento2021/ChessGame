@@ -53,26 +53,26 @@ public class BoardController : MonoBehaviour
 
     void GenerateGrid()
     {
-        for (int x = 0; x < 8; x++)
+        for (int z = 0; z < 8; z++)
         {
-            for (int z = 0; z < 8; z++)
+            for (int x = 0; x < 8; x++)
             {
-                float newXposition = initPosX + x;
-                float newZposition = initPosZ + z;
+                float newXposition = initPosX + z;
+                float newZposition = initPosZ + x;
                 target.position = new Vector3(newXposition, 0f, newZposition);
 
-                if ((x + z) % 2 == 0)
+                if ((z + x) % 2 == 0)
                 {
-                    board[x, z] = Instantiate(blackHouse, target.position, target.rotation);
-                    board[x, z].GetComponent<HousesBehaviour>().isWhite = false;
+                    board[z, x] = Instantiate(blackHouse, target.position, target.rotation);
+                    board[z, x].GetComponent<HousesBehaviour>().isWhite = false;
                 }
                 else
                 {
-                    board[x, z] = Instantiate(whiteHouse, target.position, target.rotation);
-                    board[x, z].GetComponent<HousesBehaviour>().isWhite = true;
+                    board[z, x] = Instantiate(whiteHouse, target.position, target.rotation);
+                    board[z, x].GetComponent<HousesBehaviour>().isWhite = true;
                 }
 
-                board[x, z].name = $"Tile {x} {z}";
+                board[z, x].name = $"Tile {z} {x}";
             }
         }
     }
@@ -86,45 +86,57 @@ public class BoardController : MonoBehaviour
         {
             target.position = new Vector3(initPosX + x, 0.2f, initPosZ + 1);
             piece = Instantiate(PawnWhite, target.position, target.rotation);
-            piece.GetComponent<SelectPiece>().isWhite = true;
+            piece.GetComponent<Piece>().isWhite = true;
+            piece.name = "Pawn";
+            piece.GetComponent<Piece>().myX = x;
+            piece.GetComponent<Piece>().myZ = 1;
+
         }
 
         // Create Rook White
         target.position = new Vector3(initPosX, 0.3f, initPosZ);
         piece = Instantiate(RookWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "Rook";
 
         target.position = new Vector3(initPosX + 7, 0.3f, initPosZ);
         piece = Instantiate(RookWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "Rook";
 
         // Create Knight White
         target.position = new Vector3(initPosX + 1, 0.3f, initPosZ);
         piece = Instantiate(KnightWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "Knight";
 
         target.position = new Vector3(initPosX + 6, 0.3f, initPosZ);
         piece = Instantiate(KnightWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "Knight";
 
         // Create Bishop White
         target.position = new Vector3(initPosX + 2, 0.3f, initPosZ);
         piece = Instantiate(BishopWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "Bishop";
 
         target.position = new Vector3(initPosX + 5, 0.3f, initPosZ);
         piece = Instantiate(BishopWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "Bishop";
 
         // Create Queen White
         target.position = new Vector3(initPosX + 3, 0.3f, initPosZ);
         piece = Instantiate(QueenWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "Queen";
 
         // Create King White
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ);
         piece = Instantiate(KingWhite, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = true;
+        piece.GetComponent<Piece>().isWhite = true;
+        piece.name = "King";
 
 
 
@@ -134,44 +146,53 @@ public class BoardController : MonoBehaviour
         {
             target.position = new Vector3(initPosX + x, 0.2f, initPosZ + 6);
             piece = Instantiate(PawnBlack, target.position, target.rotation);
-            piece.GetComponent<SelectPiece>().isWhite = false;
+            piece.GetComponent<Piece>().isWhite = false;
+            piece.name = "Pawn";
         }
         // Create Rook Black
         target.position = new Vector3(initPosX, 0.3f, initPosZ + 7);
         piece = Instantiate(RookBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "Rook";
 
         target.position = new Vector3(initPosX + 7, 0.3f, initPosZ + 7);
         piece = Instantiate(RookBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "Rook";
 
         // Create Knight Black
         target.position = new Vector3(initPosX + 1, 0.3f, initPosZ + 7);
         piece = Instantiate(KnightBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "Knight";
 
         target.position = new Vector3(initPosX + 6, 0.3f, initPosZ + 7);
         piece = Instantiate(KnightBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "Knight";
 
         // Create Bishop Black
         target.position = new Vector3(initPosX + 2, 0.3f, initPosZ + 7);
         piece = Instantiate(BishopBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "Bishop";
 
         target.position = new Vector3(initPosX + 5, 0.3f, initPosZ + 7);
         piece = Instantiate(BishopBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "Bishop";
 
         // Create Queen Black
         target.position = new Vector3(initPosX + 3, 0.3f, initPosZ + 7);
         piece = Instantiate(QueenBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "Queen";
 
         // Create King Black
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ + 7);
         piece = Instantiate(KingBlack, target.position, target.rotation);
-        piece.GetComponent<SelectPiece>().isWhite = false;
+        piece.GetComponent<Piece>().isWhite = false;
+        piece.name = "King";
     }
 }
 

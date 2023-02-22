@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3398312}
   - component: {fileID: 2328314}
   - component: {fileID: -6857603745109950927}
+  - component: {fileID: 2190537685535761509}
   - component: {fileID: 5911324553829798126}
   - component: {fileID: 4058850479075013303}
   m_Layer: 0
@@ -97,8 +98,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 104878}
+  iAmSelected: 0
   isWhite: 0
-  selectPiece: 0
+  myX: 0
+  myZ: 0
+--- !u!114 &2190537685535761509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b495e95723e94b9b13f6ff302326e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstMovementDone: 0
 --- !u!54 &5911324553829798126
 Rigidbody:
   m_ObjectHideFlags: 0

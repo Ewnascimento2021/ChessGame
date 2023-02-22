@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectPiece : MonoBehaviour
+public class Piece : MonoBehaviour
 {
 
     [SerializeField]
     private GameObject pieceType;
 
     private bool mouseEnter;
-    private bool iAmSelected;
+    public bool iAmSelected;
     public bool isWhite;
+    public int myX;
+    public int myZ;
 
 
     private void Start()
     {
-
         mouseEnter = false;
     }
 

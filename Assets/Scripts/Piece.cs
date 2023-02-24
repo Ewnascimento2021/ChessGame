@@ -11,6 +11,8 @@ public class Piece : MonoBehaviour
     private bool mouseEnter;
     public bool iAmSelected;
     public bool isWhite;
+    public int myOldX;
+    public int myOldZ;
     public int myX;
     public int myZ;
 
@@ -47,6 +49,10 @@ public class Piece : MonoBehaviour
     private void MovePieceSelected()
     {
         transform.position = new Vector3(ReferenceController.Instance.housePosX, transform.position.y, ReferenceController.Instance.housePosZ);
+        myOldX = myX;
+        myOldZ = myZ;
+        myX = (int)transform.position.x - 1;
+        myZ = (int)transform.position.z - 1;
         iAmSelected = false;
         ReferenceController.Instance.IsPieceSelected = false;
         ReferenceController.Instance.IsHouseSelected = false;

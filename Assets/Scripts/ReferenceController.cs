@@ -24,6 +24,8 @@ public class ReferenceController : MonoBehaviour
 
 
 
+
+
     private void Start()
     {
         blackOrWhite = true;
@@ -43,30 +45,6 @@ public class ReferenceController : MonoBehaviour
 
 
 
-
-
-    private void Update()
-    {
-        //if (isPieceSelected)
-        //{
-        //    for (int z = 0; z < 8; z++)
-        //    {
-        //        for (int x = 0; x < 8; x++)
-        //        {
-        //            if (board[x, z].GetComponent<HousesBehaviour>().myPiece != null)
-        //            {
-        //                if (board[x, z].GetComponent<HousesBehaviour>().myPiece.GetComponent<Piece>().iAmSelected)
-        //                {
-        //                    // TODO: RayLight da peça selecionada
-        //                    // board[x, z].GetComponent<MeshRenderer>().material = selectedColor;
-        //                }
-        //            }
-
-        //        }
-        //    }
-        //}
-    }
-
     public bool CheckEmpty(int x, int z)
     {
         if (board[x, z].GetComponent<HousesBehaviour>().myPiece == null)
@@ -74,11 +52,35 @@ public class ReferenceController : MonoBehaviour
             return true;
         }
         return false;
-
     }
+
 
     public void PaintColor(int x, int z)
     {
         board[x, z].GetComponent<MeshRenderer>().material = selectedColor;
     }
+
+
+    public void ReturnColor()
+    {
+        for (int z = 0; z < 8; z++)
+        {
+            for (int x = 0; x < 8; x++)
+            {
+                if (board[x, z].GetComponent<MeshRenderer>().material = selectedColor)
+                {
+                    if (board[x, z].GetComponent<HousesBehaviour>().isWhite == true)
+                    {
+                        board[x, z].GetComponent<MeshRenderer>().material = whiteColor;
+                    }
+                    else
+                    {
+                        board[x, z].GetComponent<MeshRenderer>().material = blackColor;
+                    }
+                }
+            }
+        }
+
+    }
+
 }

@@ -20,6 +20,9 @@ public class Piece : MonoBehaviour
     private void Start()
     {
         mouseEnter = false;
+        myOldX = (int)transform.position.x - 1;
+        myOldZ = (int)transform.position.z - 1;
+
     }
 
     void Update()
@@ -56,6 +59,8 @@ public class Piece : MonoBehaviour
         iAmSelected = false;
         ReferenceController.Instance.IsPieceSelected = false;
         ReferenceController.Instance.IsHouseSelected = false;
+        ReferenceController.Instance.ReturnColor();
+
     }
 
 

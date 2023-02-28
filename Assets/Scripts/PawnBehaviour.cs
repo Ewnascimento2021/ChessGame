@@ -44,7 +44,13 @@ public class PawnBehaviour : MonoBehaviour
             if (gameObject.GetComponent<Piece>().myX != 0 &&
           !ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1))
             {
-                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1))
+                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1)
+                    && GetComponent<Piece>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1);
+                }
+                else if (ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1)
+                    && !GetComponent<Piece>().isWhite)
                 {
                     ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1);
                 }
@@ -52,7 +58,13 @@ public class PawnBehaviour : MonoBehaviour
             if (gameObject.GetComponent<Piece>().myX != 7 &&
                 !ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1))
             {
-                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1))
+                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1)
+                    && GetComponent<Piece>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1);
+                }
+                else if (ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1)
+                    && !GetComponent<Piece>().isWhite)
                 {
                     ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1);
                 }

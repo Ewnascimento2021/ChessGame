@@ -7,6 +7,7 @@ public class PawnBehaviour : MonoBehaviour
 {
     private bool isFirstMovement;
     private int whiteOrBlackPawn = 1;
+    
 
     void Start()
     {
@@ -19,12 +20,8 @@ public class PawnBehaviour : MonoBehaviour
         PawnMove();
     }
 
-
-
     private void PawnMove()
     {
-        // White Pieces
-
         if (GetComponent<Piece>().isWhite)
         {
             whiteOrBlackPawn = 1;
@@ -38,7 +35,6 @@ public class PawnBehaviour : MonoBehaviour
         {
             if (!isFirstMovement)
             {
-                Debug.Log("Piece White");
                 if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<Piece>().myX, gameObject.GetComponent<Piece>().myZ + 1 * whiteOrBlackPawn))
                 {
                     ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX, gameObject.GetComponent<Piece>().myZ + 1 * whiteOrBlackPawn);

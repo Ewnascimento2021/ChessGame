@@ -8,6 +8,8 @@ public class HousesBehaviour : MonoBehaviour
     public string colorPiece = "Empty";
     private bool houseEnter;
     public GameObject myPiece = null;
+    public bool freePiece;
+
 
     public Transform house;
     public int myHouseX;
@@ -29,13 +31,15 @@ public class HousesBehaviour : MonoBehaviour
 
     private void selectHouse()
     {
-        if (houseEnter == true && Input.GetMouseButtonDown(0))
+        if (houseEnter == true && Input.GetMouseButtonDown(0) && freePiece)
         {
             ReferenceController.Instance.IsHouseSelected = true;
             ReferenceController.Instance.housePosX = transform.position.x;
             ReferenceController.Instance.housePosZ = transform.position.z;
         }
     }
+
+
 
     private void OnMouseEnter()
     {

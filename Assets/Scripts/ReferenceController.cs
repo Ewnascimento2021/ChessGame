@@ -67,6 +67,7 @@ public class ReferenceController : MonoBehaviour
     public void PaintColor(int x, int z)
     {
         board[x, z].GetComponent<MeshRenderer>().material = selectedColor;
+        board[x, z].GetComponent<HousesBehaviour>().freePiece = true;
     }
 
 
@@ -87,6 +88,7 @@ public class ReferenceController : MonoBehaviour
                         board[x, z].GetComponent<MeshRenderer>().material = blackColor;
                     }
                 }
+                board[x, z].GetComponent<HousesBehaviour>().freePiece = false;
             }
         }
 

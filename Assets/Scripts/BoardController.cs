@@ -40,7 +40,7 @@ public class BoardController : MonoBehaviour
 
     private float initPosX = 1.0f;
     private float initPosZ = 1.0f;
-    
+
 
     private void Start()
     {
@@ -148,6 +148,8 @@ public class BoardController : MonoBehaviour
             piece = Instantiate(PawnBlack, target.position, target.rotation);
             piece.GetComponent<Piece>().isWhite = false;
             piece.name = "Pawn";
+            piece.GetComponent<Piece>().myX = x;
+            piece.GetComponent<Piece>().myZ = + 6;
         }
         // Create Rook Black
         target.position = new Vector3(initPosX, 0.3f, initPosZ + 7);

@@ -54,6 +54,15 @@ public class ReferenceController : MonoBehaviour
         return false;
     }
 
+    public bool CheckColorPiece(int x, int z)
+    {
+        if (board[x, z].GetComponent<HousesBehaviour>().colorPiece == "WhitePiece")
+        {
+            return true;
+        }
+        return false;
+    }
+
 
     public void PaintColor(int x, int z)
     {

@@ -15,10 +15,9 @@ public class PawnBehaviour : MonoBehaviour
     void Update()
     {
         PawnMove();
-       
     }
 
- 
+
 
     private void PawnMove()
     {
@@ -43,14 +42,20 @@ public class PawnBehaviour : MonoBehaviour
             }
 
             if (gameObject.GetComponent<Piece>().myX != 0 &&
-          !ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1 ))
+          !ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1))
             {
-                ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1);
+                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1))
+                {
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX - 1, gameObject.GetComponent<Piece>().myZ + 1);
+                }
             }
             if (gameObject.GetComponent<Piece>().myX != 7 &&
                 !ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1))
             {
-                ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1);
+                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1))
+                {
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<Piece>().myX + 1, gameObject.GetComponent<Piece>().myZ + 1);
+                }
             }
         }
     }

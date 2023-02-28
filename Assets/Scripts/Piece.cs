@@ -27,7 +27,7 @@ public class Piece : MonoBehaviour
 
     void Update()
     {
-        if (isWhite && ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
+        if (isWhite && ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0)) 
         {
             SelectedPiece();
         }

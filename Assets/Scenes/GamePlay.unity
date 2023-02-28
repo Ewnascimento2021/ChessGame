@@ -373,5 +373,5 @@ MonoBehaviour:
   housePosX: 0
   housePosZ: 0
   selectedColor: {fileID: 2100000, guid: 20b6ab06a58d5304ba7f232ef3c285b1, type: 2}
-  whiteColor: {fileID: 2100000, guid: 645cb8a851a9acc45a104c661cdf334c, type: 2}
+  whiteColor: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   blackColor: {fileID: 2100000, guid: d21e8ebe55f97154c8311eb5850b0001, type: 2}

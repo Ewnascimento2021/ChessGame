@@ -10,14 +10,16 @@ public class HousesBehaviour : MonoBehaviour
     public GameObject myPiece = null;
 
     public Transform house;
+    public int myHouseX;
+    public int myHouseZ;
 
     private void Start()
     {
 
     }
+
     private void Update()
     {
-
         if (ReferenceController.Instance.IsPieceSelected)
         {
             selectHouse();

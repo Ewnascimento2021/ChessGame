@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class HousesBehaviour : MonoBehaviour
 {
-    public bool isWhite;
-    public string colorPiece = "Empty";
-    private bool houseEnter;
     public GameObject myPiece = null;
-    public bool freePiece;
-
-
     public Transform house;
+    public bool freePiece;
+    public bool isWhite;
     public int myHouseX;
     public int myHouseZ;
-
-    private void Start()
-    {
-
-    }
+    public string colorPiece = "Empty";
+    private bool houseEnter;
 
     private void Update()
     {

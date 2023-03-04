@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class RookBehaviour : MonoBehaviour
 {
-    private int whiteOrBlackPawn = 1;
-
-
     void Start()
     {
 
@@ -22,58 +19,116 @@ public class RookBehaviour : MonoBehaviour
 
     private void RookIsMoving()
     {
-        if (GetComponent<PieceController>().isWhite)
-        {
-            whiteOrBlackPawn = 1;
-        }
-        else
-        {
-            whiteOrBlackPawn = -1;
-        }
+        int cont = gameObject.GetComponent<PieceController>().myZ + 1;
 
-        // Z++
-
-        int cont = 0;
-        while (gameObject.GetComponent<PieceController>().myZ + cont < 8)
+        while (cont < 8)
         {
-            if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + cont * whiteOrBlackPawn))
+            if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, cont))
             {
-                ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + cont * whiteOrBlackPawn);
+                ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, cont);
             }
-            cont++;
 
-            if (!ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + cont * whiteOrBlackPawn))
+            if (!ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, cont))
             {
-                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + cont * whiteOrBlackPawn)
+                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<PieceController>().myX, cont)
                 && GetComponent<PieceController>().isWhite)
                 {
-                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + cont * whiteOrBlackPawn);
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, cont);
+                }
+                else if (ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<PieceController>().myX, cont)
+                && !GetComponent<PieceController>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, cont);
                 }
                 break;
             }
+            cont++;
         }
 
+        // Z --
 
-        cont = 0;
-        while (gameObject.GetComponent<PieceController>().myZ + cont < 8)
+        cont = gameObject.GetComponent<PieceController>().myZ - 1;
+
+        while (cont >= 0)
         {
-            if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ - cont * whiteOrBlackPawn))
+            if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, cont))
             {
-                ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ - cont * whiteOrBlackPawn);
+                ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, cont);
             }
-            cont++;
 
-            if (!ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ - cont * whiteOrBlackPawn))
+            if (!ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, cont))
             {
-                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ - cont * whiteOrBlackPawn)
+                if (!ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<PieceController>().myX, cont)
                 && GetComponent<PieceController>().isWhite)
                 {
-                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ - cont * whiteOrBlackPawn);
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, cont);
+                }
+                else if (ReferenceController.Instance.CheckColorPiece(gameObject.GetComponent<PieceController>().myX, cont)
+                && !GetComponent<PieceController>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, cont);
                 }
                 break;
             }
+            cont--;
         }
 
+
+        // X++
+
+        cont = gameObject.GetComponent<PieceController>().myX + 1;
+
+        while (cont < 8)
+        {
+            if (ReferenceController.Instance.CheckEmpty(cont, gameObject.GetComponent<PieceController>().myZ))
+            {
+                ReferenceController.Instance.PaintColor(cont, gameObject.GetComponent<PieceController>().myZ);
+            }
+
+            if (!ReferenceController.Instance.CheckEmpty(cont, gameObject.GetComponent<PieceController>().myZ))
+            {
+                if (!ReferenceController.Instance.CheckColorPiece(cont, gameObject.GetComponent<PieceController>().myZ)
+                && GetComponent<PieceController>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(cont, gameObject.GetComponent<PieceController>().myZ);
+                }
+                else if (ReferenceController.Instance.CheckColorPiece(cont, gameObject.GetComponent<PieceController>().myZ)
+                && !GetComponent<PieceController>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(cont, gameObject.GetComponent<PieceController>().myZ);
+                }
+                break;
+            }
+            cont++;
+        }
+
+        // X--
+
+        cont = gameObject.GetComponent<PieceController>().myZ - 1;
+
+        while (cont >= 0)
+        {
+            if (ReferenceController.Instance.CheckEmpty(cont, gameObject.GetComponent<PieceController>().myZ))
+            {
+                ReferenceController.Instance.PaintColor(cont, gameObject.GetComponent<PieceController>().myZ);
+            }
+
+            if (!ReferenceController.Instance.CheckEmpty(cont, gameObject.GetComponent<PieceController>().myZ))
+            {
+                if (!ReferenceController.Instance.CheckColorPiece(cont, gameObject.GetComponent<PieceController>().myZ)
+                && GetComponent<PieceController>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(cont, gameObject.GetComponent<PieceController>().myZ);
+                }
+                else if (ReferenceController.Instance.CheckColorPiece(cont, gameObject.GetComponent<PieceController>().myZ)
+                && !GetComponent<PieceController>().isWhite)
+                {
+                    ReferenceController.Instance.PaintColor(cont, gameObject.GetComponent<PieceController>().myZ);
+                }
+                break;
+            }
+            cont--;
+        }
 
 
 

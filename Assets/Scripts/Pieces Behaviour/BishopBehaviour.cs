@@ -16,7 +16,6 @@ public class BishopBehaviour : MonoBehaviour
 
     private void BishopIsMoving()
     {
-
         // X ++ and Z ++
 
         int contX = gameObject.GetComponent<PieceController>().myX + 1;
@@ -46,7 +45,6 @@ public class BishopBehaviour : MonoBehaviour
             contX++;
             contZ++;
         }
-
         // X -- and Z --
 
         contX = gameObject.GetComponent<PieceController>().myX - 1;
@@ -76,8 +74,6 @@ public class BishopBehaviour : MonoBehaviour
             contX--;
             contZ--;
         }
-
-
         // X ++ and Z --
 
         contX = gameObject.GetComponent<PieceController>().myX + 1;
@@ -107,7 +103,6 @@ public class BishopBehaviour : MonoBehaviour
             contX++;
             contZ--;
         }
-
         // X -- and Z ++
 
         contX = gameObject.GetComponent<PieceController>().myX - 1;
@@ -137,8 +132,5 @@ public class BishopBehaviour : MonoBehaviour
             contX--;
             contZ++;
         }
-
-
-
     }
 }

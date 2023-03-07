@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class KingBehaviour : MonoBehaviour
 {
-
-
     void Update()
     {
         if (GetComponent<PieceController>().iAmSelected)

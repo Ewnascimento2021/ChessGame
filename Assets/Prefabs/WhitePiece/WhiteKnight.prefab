@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4954351087495359615}
   - component: {fileID: -8185364165909993633}
   - component: {fileID: 7964106453794860615}
+  - component: {fileID: -6895526358047952375}
   m_Layer: 0
   m_Name: WhiteKnight
   m_TagString: WhitePiece
@@ -97,8 +98,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 107724}
+  iAmSelected: 0
   isWhite: 0
-  selectPiece: 0
+  myOldX: 0
+  myOldZ: 0
+  myX: 0
+  myZ: 0
 --- !u!54 &-8185364165909993633
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,3 +134,15 @@ CapsuleCollider:
   m_Height: 2.69
   m_Direction: 1
   m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &-6895526358047952375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9741585e7e73aee4691e36b72963ffb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class QueenBehaviour : MonoBehaviour
 {
-
     void Update()
     {
         if (GetComponent<PieceController>().iAmSelected)
@@ -45,7 +44,6 @@ public class QueenBehaviour : MonoBehaviour
             contX++;
             contZ++;
         }
-
         // X -- and Z --
 
         contX = gameObject.GetComponent<PieceController>().myX - 1;
@@ -75,8 +73,6 @@ public class QueenBehaviour : MonoBehaviour
             contX--;
             contZ--;
         }
-
-
         // X ++ and Z --
 
         contX = gameObject.GetComponent<PieceController>().myX + 1;
@@ -106,7 +102,6 @@ public class QueenBehaviour : MonoBehaviour
             contX++;
             contZ--;
         }
-
         // X -- and Z ++
 
         contX = gameObject.GetComponent<PieceController>().myX - 1;
@@ -136,7 +131,6 @@ public class QueenBehaviour : MonoBehaviour
             contX--;
             contZ++;
         }
-
         // Z++
         int cont = gameObject.GetComponent<PieceController>().myZ + 1;
 
@@ -163,7 +157,6 @@ public class QueenBehaviour : MonoBehaviour
             }
             cont++;
         }
-
         // Z--
 
         cont = gameObject.GetComponent<PieceController>().myZ - 1;
@@ -191,8 +184,6 @@ public class QueenBehaviour : MonoBehaviour
             }
             cont--;
         }
-
-
         // X++
 
         cont = gameObject.GetComponent<PieceController>().myX + 1;
@@ -220,7 +211,6 @@ public class QueenBehaviour : MonoBehaviour
             }
             cont++;
         }
-
         // X--
 
         cont = gameObject.GetComponent<PieceController>().myX - 1;

@@ -113,11 +113,15 @@ public class BoardController : MonoBehaviour
         piece = Instantiate(KnightWhite, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = true;
         piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 1;
+        piece.GetComponent<PieceController>().myZ = 0;
 
         target.position = new Vector3(initPosX + 6, 0.3f, initPosZ);
         piece = Instantiate(KnightWhite, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = true;
         piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 6;
+        piece.GetComponent<PieceController>().myZ = 0;
 
         // Create Bishop White
         target.position = new Vector3(initPosX + 2, 0.3f, initPosZ);
@@ -139,12 +143,16 @@ public class BoardController : MonoBehaviour
         piece = Instantiate(QueenWhite, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = true;
         piece.name = "Queen";
+        piece.GetComponent<PieceController>().myX = 3;
+        piece.GetComponent<PieceController>().myZ = 0;
 
         // Create King White
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ);
         piece = Instantiate(KingWhite, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = true;
         piece.name = "King";
+        piece.GetComponent<PieceController>().myX = 4;
+        piece.GetComponent<PieceController>().myZ = 0;
 
 
 
@@ -179,11 +187,15 @@ public class BoardController : MonoBehaviour
         piece = Instantiate(KnightBlack, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = false;
         piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 1;
+        piece.GetComponent<PieceController>().myZ = 7;
 
         target.position = new Vector3(initPosX + 6, 0.3f, initPosZ + 7);
         piece = Instantiate(KnightBlack, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = false;
         piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 6;
+        piece.GetComponent<PieceController>().myZ = 7;
 
         // Create Bishop Black
         target.position = new Vector3(initPosX + 2, 0.3f, initPosZ + 7);
@@ -205,12 +217,16 @@ public class BoardController : MonoBehaviour
         piece = Instantiate(QueenBlack, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = false;
         piece.name = "Queen";
+        piece.GetComponent<PieceController>().myX = 3;
+        piece.GetComponent<PieceController>().myZ = 7;
 
         // Create King Black
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ + 7);
         piece = Instantiate(KingBlack, target.position, target.rotation);
         piece.GetComponent<PieceController>().isWhite = false;
         piece.name = "King";
+        piece.GetComponent<PieceController>().myX = 4;
+        piece.GetComponent<PieceController>().myZ = 7;
     }
 }
 

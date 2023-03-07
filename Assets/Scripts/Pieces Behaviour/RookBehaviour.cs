@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class RookBehaviour : MonoBehaviour
 {
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (GetComponent<PieceController>().iAmSelected)
@@ -19,6 +14,8 @@ public class RookBehaviour : MonoBehaviour
 
     private void RookIsMoving()
     {
+
+        // Z++
         int cont = gameObject.GetComponent<PieceController>().myZ + 1;
 
         while (cont < 8)
@@ -45,7 +42,7 @@ public class RookBehaviour : MonoBehaviour
             cont++;
         }
 
-        // Z --
+        // Z--
 
         cont = gameObject.GetComponent<PieceController>().myZ - 1;
 
@@ -104,7 +101,7 @@ public class RookBehaviour : MonoBehaviour
 
         // X--
 
-        cont = gameObject.GetComponent<PieceController>().myZ - 1;
+        cont = gameObject.GetComponent<PieceController>().myX - 1;
 
         while (cont >= 0)
         {
@@ -129,8 +126,5 @@ public class RookBehaviour : MonoBehaviour
             }
             cont--;
         }
-
-
-
     }
 }

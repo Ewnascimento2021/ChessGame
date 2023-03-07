@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5566917031078686730}
   - component: {fileID: -7167159758603671080}
   - component: {fileID: 6662985767578304146}
+  - component: {fileID: 8511920835178183495}
   m_Layer: 0
   m_Name: BlackBishop
   m_TagString: Undefined
@@ -97,8 +98,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 196866}
+  iAmSelected: 0
   isWhite: 0
-  selectPiece: 0
+  myOldX: 0
+  myOldZ: 0
+  myX: 0
+  myZ: 0
 --- !u!54 &-7167159758603671080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,3 +134,15 @@ CapsuleCollider:
   m_Height: 2.79
   m_Direction: 1
   m_Center: {x: 0, y: 0.97, z: 0}
+--- !u!114 &8511920835178183495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88857d574c7fd38469628d6cbb2028f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

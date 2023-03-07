@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -5441474743844442022}
   - component: {fileID: 3016859685101482238}
   - component: {fileID: 7797175288941440035}
+  - component: {fileID: 4185658026786453505}
   m_Layer: 0
   m_Name: WhiteBishop
   m_TagString: WhitePiece
@@ -97,8 +98,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceType: {fileID: 190264}
+  iAmSelected: 0
   isWhite: 0
-  selectPiece: 0
+  myOldX: 0
+  myOldZ: 0
+  myX: 0
+  myZ: 0
 --- !u!54 &3016859685101482238
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,3 +134,15 @@ CapsuleCollider:
   m_Height: 2.82
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4185658026786453505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88857d574c7fd38469628d6cbb2028f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -42,11 +42,14 @@ public class PawnBehaviour : MonoBehaviour
         }
         if (isFirstMovement)
         {
-            if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + 2 * whiteOrBlackPawn))
+            if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + 1 * whiteOrBlackPawn))
             {
                 ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + 1 * whiteOrBlackPawn);
-                ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + 2 * whiteOrBlackPawn);
 
+                if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + 2 * whiteOrBlackPawn))
+                {
+                    ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + 2 * whiteOrBlackPawn);
+                }
                 isFirstMovement = false;
             }
         }

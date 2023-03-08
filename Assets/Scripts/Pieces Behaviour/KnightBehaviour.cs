@@ -170,7 +170,7 @@ public class KnightBehaviour : MonoBehaviour
             }
         }
         // X - 1, Z - 2
-        if (gameObject.GetComponent<PieceController>().myX >= 1 && gameObject.GetComponent<PieceController>().myZ >= 3)
+        if (gameObject.GetComponent<PieceController>().myX >= 1 && gameObject.GetComponent<PieceController>().myZ >= 2)
         {
             if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 1, gameObject.GetComponent<PieceController>().myZ - 2))
             {

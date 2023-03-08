@@ -100,6 +100,8 @@ MonoBehaviour:
   pieceType: {fileID: 104878}
   iAmSelected: 0
   isWhite: 0
+  myOldX: 0
+  myOldZ: 0
   myX: 0
   myZ: 0
 --- !u!54 &5911324553829798126
@@ -144,4 +146,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3b495e95723e94b9b13f6ff302326e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFirstMovement: 1

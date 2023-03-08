@@ -71,4 +71,26 @@ public class PieceController : MonoBehaviour
     {
         mouseEnter = false;
     }
+
+    private void OnCollisionEnter (Collision other)
+    {
+        if (isWhite && !ReferenceController.Instance.BlackOrWhite)
+        {
+            if (other.gameObject.CompareTag("BlackPiece"))
+            {
+                Destroy(other.gameObject);
+            }
+        }
+        if (!isWhite && ReferenceController.Instance.BlackOrWhite)
+        {
+            if (other.gameObject.CompareTag("WhitePiece"))
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+
+
+
+    }
 }

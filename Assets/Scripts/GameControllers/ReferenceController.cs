@@ -77,7 +77,7 @@ public class ReferenceController : MonoBehaviour
         {
             for (int x = 0; x < 8; x++)
             {
-                if (board[x, z].GetComponent<MeshRenderer>().material = selectedColor)
+                if (board[x, z].GetComponent<HousesBehaviour>().freePiece = true)
                 {
                     if (board[x, z].GetComponent<HousesBehaviour>().isWhite == true)
                     {

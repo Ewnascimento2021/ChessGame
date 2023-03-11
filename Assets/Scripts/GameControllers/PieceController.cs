@@ -45,8 +45,7 @@ public class PieceController : MonoBehaviour
     private void SelectedPiece()
     {
         iAmSelected = true;
-        ReferenceController.Instance.IsPieceSelected = true;
-        ReferenceController.Instance.BlackOrWhite = !ReferenceController.Instance.BlackOrWhite;
+        ReferenceController.Instance.IsPieceSelected = true;     
     }
 
     private void MovePieceSelected()
@@ -59,6 +58,7 @@ public class PieceController : MonoBehaviour
         iAmSelected = false;
         ReferenceController.Instance.IsPieceSelected = false;
         ReferenceController.Instance.IsHouseSelected = false;
+        ReferenceController.Instance.BlackOrWhite = !ReferenceController.Instance.BlackOrWhite;
         ReferenceController.Instance.ReturnColor();
     }
 
@@ -88,9 +88,5 @@ public class PieceController : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-
-
-
-
     }
 }

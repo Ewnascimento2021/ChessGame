@@ -15,7 +15,7 @@ public class HousesBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (ReferenceController.Instance.IsPieceSelected)
+        if (ReferenceController.Instance.IsPieceSelected && houseEnter == true && Input.GetMouseButtonDown(0) && freePiece)
         {
             selectHouse();
         }
@@ -24,12 +24,9 @@ public class HousesBehaviour : MonoBehaviour
 
     private void selectHouse()
     {
-        if (houseEnter == true && Input.GetMouseButtonDown(0) && freePiece)
-        {
-            ReferenceController.Instance.IsHouseSelected = true;
-            ReferenceController.Instance.housePosX = transform.position.x;
-            ReferenceController.Instance.housePosZ = transform.position.z;
-        }
+        ReferenceController.Instance.IsHouseSelected = true;
+        ReferenceController.Instance.housePosX = transform.position.x;
+        ReferenceController.Instance.housePosZ = transform.position.z;
     }
 
 

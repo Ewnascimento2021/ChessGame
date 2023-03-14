@@ -15,6 +15,7 @@ public class PieceController : MonoBehaviour
     public int myOldZ;
     public int myX;
     public int myZ;
+    public bool isPainting = false;
 
 
     private void Start()
@@ -30,22 +31,29 @@ public class PieceController : MonoBehaviour
         if (isWhite && ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
         {
             SelectedPiece();
+
         }
         else if (!isWhite && !ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
         {
             SelectedPiece();
+
         }
 
         if (ReferenceController.Instance.IsHouseSelected && iAmSelected)
         {
             MovePieceSelected();
         }
+        else if (iAmSelected && !mouseEnter && Input.GetMouseButtonDown(0))
+        {
+            cancelSelect();
+        }
     }
 
     private void SelectedPiece()
     {
         iAmSelected = true;
-        ReferenceController.Instance.IsPieceSelected = true;     
+        isPainting = true;
+        ReferenceController.Instance.IsPieceSelected = true;
     }
 
     private void MovePieceSelected()
@@ -62,6 +70,14 @@ public class PieceController : MonoBehaviour
         ReferenceController.Instance.ReturnColor();
     }
 
+    private void cancelSelect()
+    {
+        ReferenceController.Instance.IsPieceSelected = false;
+        ReferenceController.Instance.ReturnColor();
+        iAmSelected = false;
+    }
+
+
 
     private void OnMouseEnter()
     {
@@ -72,7 +88,7 @@ public class PieceController : MonoBehaviour
         mouseEnter = false;
     }
 
-    private void OnCollisionEnter (Collision other)
+    private void OnCollisionEnter(Collision other)
     {
         if (isWhite && !ReferenceController.Instance.BlackOrWhite)
         {

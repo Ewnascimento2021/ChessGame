@@ -15,7 +15,7 @@ public class HousesBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (ReferenceController.Instance.IsPieceSelected && houseEnter == true && Input.GetMouseButtonDown(0) && freePiece)
+        if (ReferenceController.Instance.IsPieceSelected && houseEnter && Input.GetMouseButtonDown(0) && freePiece)
         {
             selectHouse();
         }
@@ -29,8 +29,6 @@ public class HousesBehaviour : MonoBehaviour
         ReferenceController.Instance.housePosZ = transform.position.z;
     }
 
-
-
     private void OnMouseEnter()
     {
         houseEnter = true;
@@ -40,8 +38,6 @@ public class HousesBehaviour : MonoBehaviour
     {
         houseEnter = false;
     }
-
-
     private void OnCollisionEnter(Collision other)
     {
         colorPiece = other.gameObject.tag;

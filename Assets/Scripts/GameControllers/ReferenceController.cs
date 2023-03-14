@@ -42,6 +42,8 @@ public class ReferenceController : MonoBehaviour
 
     private bool blackOrWhite;
     public bool BlackOrWhite { get => blackOrWhite; set => blackOrWhite = value; }
+    
+
 
 
 

@@ -34,6 +34,10 @@ public class PawnBehaviour : MonoBehaviour
             whiteOrBlackPawn = -1;
         }
 
+        if (GetComponent<PieceController>().firstMove)
+        {
+            isFirstMovement = false;
+        }
 
         if (!isFirstMovement)
         {
@@ -52,7 +56,6 @@ public class PawnBehaviour : MonoBehaviour
                 {
                     ReferenceController.Instance.PaintColor(gameObject.GetComponent<PieceController>().myX, gameObject.GetComponent<PieceController>().myZ + 2 * whiteOrBlackPawn);
                 }
-                isFirstMovement = false;
             }
         }
 

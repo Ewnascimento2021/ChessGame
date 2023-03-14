@@ -16,6 +16,7 @@ public class PieceController : MonoBehaviour
     public int myX;
     public int myZ;
     public bool isPainting = false;
+    public bool firstMove;
 
 
     private void Start()
@@ -63,6 +64,7 @@ public class PieceController : MonoBehaviour
         myOldZ = myZ;
         myX = (int)transform.position.x - 1;
         myZ = (int)transform.position.z - 1;
+        firstMove = true;
         iAmSelected = false;
         ReferenceController.Instance.IsPieceSelected = false;
         ReferenceController.Instance.IsHouseSelected = false;

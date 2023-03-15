@@ -21,7 +21,10 @@ public class ReferenceController : MonoBehaviour
     public Material selectedColor;
     public Material whiteColor;
     public Material blackColor;
-
+    public Material redColor;
+    public Material blueColor;
+    public Material yellowColor;
+    public Material chessMaterial;
 
 
 

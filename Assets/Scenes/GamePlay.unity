@@ -292,13 +292,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744519251}
-  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 4.5, y: 6.256, z: -1.634}
+  m_LocalRotation: {x: 0.4848096, y: 0, z: 0, w: 0.8746197}
+  m_LocalPosition: {x: 4.5, y: 6.256, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 58, y: 0, z: 0}
 --- !u!1 &1534272612
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,3 +375,7 @@ MonoBehaviour:
   selectedColor: {fileID: 2100000, guid: 20b6ab06a58d5304ba7f232ef3c285b1, type: 2}
   whiteColor: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   blackColor: {fileID: 2100000, guid: d21e8ebe55f97154c8311eb5850b0001, type: 2}
+  redColor: {fileID: 2100000, guid: d43367dc2db94fd499c7792296f538b1, type: 2}
+  blueColor: {fileID: 2100000, guid: e8d0c7dcbcf36ed47b4ee125390708bf, type: 2}
+  yellowColor: {fileID: 2100000, guid: 0453216697ca4d44db3072dab70d6ffc, type: 2}
+  chessMaterial: {fileID: 2100000, guid: fdf806cb46d6a40418581d1568ff1c94, type: 2}

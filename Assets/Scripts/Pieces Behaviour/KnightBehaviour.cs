@@ -126,7 +126,7 @@ public class KnightBehaviour : MonoBehaviour
             }
         }
         // X - 2, Z + 1
-        if (gameObject.GetComponent<PieceController>().myX >= 3 && gameObject.GetComponent<PieceController>().myZ <= 6)
+        if (gameObject.GetComponent<PieceController>().myX >= 2 && gameObject.GetComponent<PieceController>().myZ <= 6)
         {
             if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ + 1))
             {
@@ -148,7 +148,7 @@ public class KnightBehaviour : MonoBehaviour
             }
         }
         // X - 2, Z - 1
-        if (gameObject.GetComponent<PieceController>().myX >= 3 && gameObject.GetComponent<PieceController>().myZ >= 1)
+        if (gameObject.GetComponent<PieceController>().myX >= 2 && gameObject.GetComponent<PieceController>().myZ >= 1)
         {
             if (ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ - 1))
             {

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2311140}
   - component: {fileID: -4954351087495359615}
   - component: {fileID: -8185364165909993633}
-  - component: {fileID: 7964106453794860615}
   - component: {fileID: -6895526358047952375}
+  - component: {fileID: 855151698372632605}
   m_Layer: 0
   m_Name: WhiteKnight
   m_TagString: WhitePiece
@@ -104,6 +104,8 @@ MonoBehaviour:
   myOldZ: 0
   myX: 0
   myZ: 0
+  isPainting: 0
+  firstMove: 0
 --- !u!54 &-8185364165909993633
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120,20 +122,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!136 &7964106453794860615
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.24
-  m_Height: 2.69
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!114 &-6895526358047952375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +134,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9741585e7e73aee4691e36b72963ffb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &855151698372632605
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 69faab6ae9c00a848a82d036ac8c75d4, type: 3}

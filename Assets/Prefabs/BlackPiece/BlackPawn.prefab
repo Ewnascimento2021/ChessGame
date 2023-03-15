@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2309778}
   - component: {fileID: -2851453641132513254}
   - component: {fileID: -5225264180388271335}
-  - component: {fileID: 8781797785551246604}
   - component: {fileID: -3237214943205831952}
+  - component: {fileID: 4397583686983614979}
   m_Layer: 0
   m_Name: BlackPawn
   m_TagString: BlackPiece
@@ -104,6 +104,8 @@ MonoBehaviour:
   myOldZ: 0
   myX: 0
   myZ: 0
+  isPainting: 0
+  firstMove: 0
 --- !u!54 &-5225264180388271335
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120,20 +122,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!136 &8781797785551246604
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.29
-  m_Height: 1.88
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.65, z: 0}
 --- !u!114 &-3237214943205831952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,4 +134,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3b495e95723e94b9b13f6ff302326e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFirstMovement: 0
+--- !u!64 &4397583686983614979
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8fbcce33444d4ce4db5b61f8d0eeb7aa, type: 3}

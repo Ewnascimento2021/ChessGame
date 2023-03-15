@@ -55,6 +55,7 @@ public class PieceController : MonoBehaviour
         iAmSelected = true;
         isPainting = true;
         ReferenceController.Instance.IsPieceSelected = true;
+        gameObject.GetComponent<MeshRenderer>().material = ReferenceController.Instance.blueColor;
     }
 
     private void MovePieceSelected()
@@ -68,6 +69,7 @@ public class PieceController : MonoBehaviour
         iAmSelected = false;
         ReferenceController.Instance.IsPieceSelected = false;
         ReferenceController.Instance.IsHouseSelected = false;
+        gameObject.GetComponent<MeshRenderer>().material = ReferenceController.Instance.chessMaterial;
         ReferenceController.Instance.BlackOrWhite = !ReferenceController.Instance.BlackOrWhite;
         ReferenceController.Instance.ReturnColor();
     }
@@ -77,6 +79,7 @@ public class PieceController : MonoBehaviour
         ReferenceController.Instance.IsPieceSelected = false;
         ReferenceController.Instance.ReturnColor();
         iAmSelected = false;
+        gameObject.GetComponent<MeshRenderer>().material = ReferenceController.Instance.chessMaterial;
     }
 
 

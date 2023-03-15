@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2313672}
   - component: {fileID: 2655386226929527678}
   - component: {fileID: 5796443221226661899}
-  - component: {fileID: -7102195882612877783}
   - component: {fileID: -4897307459844386988}
+  - component: {fileID: 2138880884428309596}
   m_Layer: 0
   m_Name: BlackKing
   m_TagString: BlackPiece
@@ -104,6 +104,8 @@ MonoBehaviour:
   myOldZ: 0
   myX: 0
   myZ: 0
+  isPainting: 0
+  firstMove: 0
 --- !u!54 &5796443221226661899
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120,20 +122,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!136 &-7102195882612877783
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.35
-  m_Height: 3.6
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.55, z: 0}
 --- !u!114 &-4897307459844386988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +134,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53399fbafed09e14cab08cde302b3f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &2138880884428309596
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: a1edea9a41e71514f94a737abaf1410c, type: 3}

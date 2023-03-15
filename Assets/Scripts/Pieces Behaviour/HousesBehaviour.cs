@@ -38,11 +38,13 @@ public class HousesBehaviour : MonoBehaviour
     {
         houseEnter = false;
     }
+
     private void OnCollisionEnter(Collision other)
     {
         colorPiece = other.gameObject.tag;
         myPiece = other.gameObject;
     }
+
     private void OnCollisionExit(Collision other)
     {
         colorPiece = "Empty";

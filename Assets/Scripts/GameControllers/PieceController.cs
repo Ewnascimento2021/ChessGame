@@ -37,7 +37,6 @@ public class PieceController : MonoBehaviour
         else if (!isWhite && !ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
         {
             SelectedPiece();
-
         }
 
         if (ReferenceController.Instance.IsHouseSelected && iAmSelected)

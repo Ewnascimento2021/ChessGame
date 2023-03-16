@@ -68,9 +68,20 @@ public class ReferenceController : MonoBehaviour
     public bool RookMoved4 { get => rookMoved4; set => rookMoved4 = value; }
 
 
-    private bool rooked;
-    public bool Rooked { get => rooked; set => rooked = value; }
+    private bool rooked1;
+    public bool Rooked1 { get => rooked1; set => rooked1 = value; }
 
+
+    private bool rooked2;
+    public bool Rooked2 { get => rooked2; set => rooked2 = value; }
+
+
+    private bool rooked3;
+    public bool Rooked3 { get => rooked3; set => rooked3 = value; }
+
+    
+    private bool rooked4;
+    public bool Rooked4 { get => rooked4; set => rooked4 = value; }
 
 
 

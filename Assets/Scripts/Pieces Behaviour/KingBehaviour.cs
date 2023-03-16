@@ -16,8 +16,9 @@ public class KingBehaviour : MonoBehaviour
             ReferenceController.Instance.KingMoved = true;
         }
 
-        // RookLeft
+        // RookLeftWhite
         else if (ReferenceController.Instance.KingMoved == false && ReferenceController.Instance.RookMoved1 == false && GetComponent<PieceController>().isWhite
+            && ReferenceController.Instance.BlackOrWhite
             && GetComponent<PieceController>().iAmSelected
             && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 1, gameObject.GetComponent<PieceController>().myZ)
             && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ)
@@ -26,17 +27,19 @@ public class KingBehaviour : MonoBehaviour
             ReferenceController.Instance.PaintRookColor(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ);
         }
 
-        if (gameObject.GetComponent<PieceController>().myOldX == 4 && gameObject.GetComponent<PieceController>().myOldZ == 0 
+        if (gameObject.GetComponent<PieceController>().myOldX == 4 && gameObject.GetComponent<PieceController>().myOldZ == 0
             && gameObject.GetComponent<PieceController>().myX == 2 && gameObject.GetComponent<PieceController>().myZ == 0)
         {
-            ReferenceController.Instance.Rooked = true;
+            ReferenceController.Instance.KingMoved = true;
+            ReferenceController.Instance.Rooked1= true;
         }
 
-        // RookRight
+        // RookRighWhite
         else if (ReferenceController.Instance.KingMoved == false && ReferenceController.Instance.RookMoved2 == false && GetComponent<PieceController>().isWhite
-           && GetComponent<PieceController>().iAmSelected
-           && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX + 1, gameObject.GetComponent<PieceController>().myZ)
-           && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX + 2, gameObject.GetComponent<PieceController>().myZ))
+            && ReferenceController.Instance.BlackOrWhite
+            && GetComponent<PieceController>().iAmSelected
+            && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX + 1, gameObject.GetComponent<PieceController>().myZ)
+            && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX + 2, gameObject.GetComponent<PieceController>().myZ))
         {
             ReferenceController.Instance.PaintRookColor(gameObject.GetComponent<PieceController>().myX + 2, gameObject.GetComponent<PieceController>().myZ);
         }
@@ -44,7 +47,8 @@ public class KingBehaviour : MonoBehaviour
         if (gameObject.GetComponent<PieceController>().myOldX == 4 && gameObject.GetComponent<PieceController>().myOldZ == 0
             && gameObject.GetComponent<PieceController>().myX == 6 && gameObject.GetComponent<PieceController>().myZ == 0)
         {
-            ReferenceController.Instance.Rooked = true;
+            ReferenceController.Instance.KingMoved = true;
+            ReferenceController.Instance.Rooked2 = true;
         }
 
 

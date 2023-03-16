@@ -38,8 +38,7 @@ public class RookBehaviour : MonoBehaviour
             RookIsMoving();
         }
 
-        else if (gameObject.GetComponent<PieceController>().myX == 0 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked == true
-            && ReferenceController.Instance.RookMoved1 == false)
+        else if (gameObject.GetComponent<PieceController>().myX == 0 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked1 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX + 4, transform.position.y, transform.position.z);
 
@@ -48,8 +47,7 @@ public class RookBehaviour : MonoBehaviour
             ReferenceController.Instance.RookMoved1 = true;
         }
 
-        else if (gameObject.GetComponent<PieceController>().myX == 7 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked == true
-            && ReferenceController.Instance.RookMoved2 == false)
+        else if (gameObject.GetComponent<PieceController>().myX == 7 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked2 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX - 1, transform.position.y, transform.position.z);
 

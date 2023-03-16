@@ -11,18 +11,23 @@ public class KingBehaviour : MonoBehaviour
         {
             KingIsMoving();
         }
-        if (GetComponent<PieceController>().firstMove)
+        if (GetComponent<PieceController>().firstMove && GetComponent<PieceController>().isWhite)
         {
-            ReferenceController.Instance.KingMoved = true;
+            ReferenceController.Instance.KingWhiteMoved = true;
+        }
+        else if (GetComponent<PieceController>().firstMove && !GetComponent<PieceController>().isWhite)
+        {
+            ReferenceController.Instance.KingBlackMoved = true;
         }
 
+
         // RookLeftWhite
-        else if (ReferenceController.Instance.KingMoved == false && ReferenceController.Instance.RookMoved1 == false && GetComponent<PieceController>().isWhite
-            && ReferenceController.Instance.BlackOrWhite
-            && GetComponent<PieceController>().iAmSelected
-            && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 1, gameObject.GetComponent<PieceController>().myZ)
-            && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ)
-            && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 3, gameObject.GetComponent<PieceController>().myZ))
+        else if (ReferenceController.Instance.KingWhiteMoved == false && ReferenceController.Instance.RookMoved1 == false && GetComponent<PieceController>().isWhite
+        && ReferenceController.Instance.BlackOrWhite
+        && GetComponent<PieceController>().iAmSelected
+        && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 1, gameObject.GetComponent<PieceController>().myZ)
+        && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ)
+        && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 3, gameObject.GetComponent<PieceController>().myZ))
         {
             ReferenceController.Instance.PaintRookColor(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ);
         }
@@ -30,12 +35,12 @@ public class KingBehaviour : MonoBehaviour
         if (gameObject.GetComponent<PieceController>().myOldX == 4 && gameObject.GetComponent<PieceController>().myOldZ == 0
             && gameObject.GetComponent<PieceController>().myX == 2 && gameObject.GetComponent<PieceController>().myZ == 0)
         {
-            ReferenceController.Instance.KingMoved = true;
-            ReferenceController.Instance.Rooked1= true;
+            ReferenceController.Instance.KingWhiteMoved = true;
+            ReferenceController.Instance.Rooked1 = true;
         }
 
         // RookRighWhite
-        else if (ReferenceController.Instance.KingMoved == false && ReferenceController.Instance.RookMoved2 == false && GetComponent<PieceController>().isWhite
+        else if (ReferenceController.Instance.KingWhiteMoved == false && ReferenceController.Instance.RookMoved2 == false && GetComponent<PieceController>().isWhite
             && ReferenceController.Instance.BlackOrWhite
             && GetComponent<PieceController>().iAmSelected
             && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX + 1, gameObject.GetComponent<PieceController>().myZ)
@@ -47,10 +52,44 @@ public class KingBehaviour : MonoBehaviour
         if (gameObject.GetComponent<PieceController>().myOldX == 4 && gameObject.GetComponent<PieceController>().myOldZ == 0
             && gameObject.GetComponent<PieceController>().myX == 6 && gameObject.GetComponent<PieceController>().myZ == 0)
         {
-            ReferenceController.Instance.KingMoved = true;
+            ReferenceController.Instance.KingWhiteMoved = true;
             ReferenceController.Instance.Rooked2 = true;
         }
 
+        // RookLeftBlack
+        else if (ReferenceController.Instance.KingBlackMoved == false && ReferenceController.Instance.RookMoved3 == false && !GetComponent<PieceController>().isWhite
+           && !ReferenceController.Instance.BlackOrWhite
+           && GetComponent<PieceController>().iAmSelected
+           && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 1, gameObject.GetComponent<PieceController>().myZ)
+           && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ)
+           && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX - 3, gameObject.GetComponent<PieceController>().myZ))
+        {
+            ReferenceController.Instance.PaintRookColor(gameObject.GetComponent<PieceController>().myX - 2, gameObject.GetComponent<PieceController>().myZ);
+        }
+
+        if (gameObject.GetComponent<PieceController>().myOldX == 4 && gameObject.GetComponent<PieceController>().myOldZ == 7
+            && gameObject.GetComponent<PieceController>().myX == 2 && gameObject.GetComponent<PieceController>().myZ == 7)
+        {
+            ReferenceController.Instance.KingBlackMoved = true;
+            ReferenceController.Instance.Rooked3 = true;
+        }
+
+        // RookRighBlack
+        else if (ReferenceController.Instance.KingBlackMoved == false && ReferenceController.Instance.RookMoved4 == false && !GetComponent<PieceController>().isWhite
+            && !ReferenceController.Instance.BlackOrWhite
+            && GetComponent<PieceController>().iAmSelected
+            && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX + 1, gameObject.GetComponent<PieceController>().myZ)
+            && ReferenceController.Instance.CheckEmpty(gameObject.GetComponent<PieceController>().myX + 2, gameObject.GetComponent<PieceController>().myZ))
+        {
+            ReferenceController.Instance.PaintRookColor(gameObject.GetComponent<PieceController>().myX + 2, gameObject.GetComponent<PieceController>().myZ);
+        }
+
+        if (gameObject.GetComponent<PieceController>().myOldX == 4 && gameObject.GetComponent<PieceController>().myOldZ == 7
+            && gameObject.GetComponent<PieceController>().myX == 6 && gameObject.GetComponent<PieceController>().myZ == 7)
+        {
+            ReferenceController.Instance.KingBlackMoved = true;
+            ReferenceController.Instance.Rooked4 = true;
+        }
 
 
 

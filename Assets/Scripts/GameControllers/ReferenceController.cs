@@ -48,8 +48,11 @@ public class ReferenceController : MonoBehaviour
     public bool BlackOrWhite { get => blackOrWhite; set => blackOrWhite = value; }
 
 
-    private bool kingMoved;
-    public bool KingMoved { get => kingMoved; set => kingMoved = value; }
+    private bool kingWhiteMoved;
+    public bool KingWhiteMoved { get => kingWhiteMoved; set => kingWhiteMoved = value; }
+
+    private bool kingBlackMoved;
+    public bool KingBlackMoved { get => kingBlackMoved; set => kingBlackMoved = value; }
 
 
     private bool rookMoved1;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RookBehaviour : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class RookBehaviour : MonoBehaviour
             RookIsMoving();
         }
 
+        //WhiteLeft
         else if (gameObject.GetComponent<PieceController>().myX == 0 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked1 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX + 4, transform.position.y, transform.position.z);
@@ -46,7 +48,7 @@ public class RookBehaviour : MonoBehaviour
 
             ReferenceController.Instance.RookMoved1 = true;
         }
-
+        //WhiteRight
         else if (gameObject.GetComponent<PieceController>().myX == 7 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked2 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX - 1, transform.position.y, transform.position.z);
@@ -54,7 +56,25 @@ public class RookBehaviour : MonoBehaviour
             GetComponent<PieceController>().myX = gameObject.GetComponent<PieceController>().myX - 2;
 
             ReferenceController.Instance.RookMoved2 = true;
+        }
 
+        //BlackLeft
+        else if (gameObject.GetComponent<PieceController>().myX == 0 && gameObject.GetComponent<PieceController>().myZ == 7 && ReferenceController.Instance.Rooked3 == true)
+        {
+            transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX + 4, transform.position.y, transform.position.z);
+
+            GetComponent<PieceController>().myX = gameObject.GetComponent<PieceController>().myX + 3;
+
+            ReferenceController.Instance.RookMoved3 = true;
+        }
+        //BlackRight
+        else if (gameObject.GetComponent<PieceController>().myX == 7 && gameObject.GetComponent<PieceController>().myZ == 7 && ReferenceController.Instance.Rooked4 == true)
+        {
+            transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX - 1, transform.position.y, transform.position.z);
+
+            GetComponent<PieceController>().myX = gameObject.GetComponent<PieceController>().myX - 2;
+
+            ReferenceController.Instance.RookMoved4 = true;
         }
 
     }

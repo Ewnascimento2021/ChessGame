@@ -182,43 +182,43 @@ public class BoardController : MonoBehaviour
         piece.GetComponent<PieceController>().myX = 7;
         piece.GetComponent<PieceController>().myZ = 7;
 
-        // Create Knight Black
-        target.position = new Vector3(initPosX + 1, 0.3f, initPosZ + 7);
-        piece = Instantiate(KnightBlack, target.position, target.rotation);
-        piece.GetComponent<PieceController>().isWhite = false;
-        piece.name = "Knight";
-        piece.GetComponent<PieceController>().myX = 1;
-        piece.GetComponent<PieceController>().myZ = 7;
+        //// Create Knight Black
+        //target.position = new Vector3(initPosX + 1, 0.3f, initPosZ + 7);
+        //piece = Instantiate(KnightBlack, target.position, target.rotation);
+        //piece.GetComponent<PieceController>().isWhite = false;
+        //piece.name = "Knight";
+        //piece.GetComponent<PieceController>().myX = 1;
+        //piece.GetComponent<PieceController>().myZ = 7;
 
-        target.position = new Vector3(initPosX + 6, 0.3f, initPosZ + 7);
-        piece = Instantiate(KnightBlack, target.position, target.rotation);
-        piece.GetComponent<PieceController>().isWhite = false;
-        piece.name = "Knight";
-        piece.GetComponent<PieceController>().myX = 6;
-        piece.GetComponent<PieceController>().myZ = 7;
+        //target.position = new Vector3(initPosX + 6, 0.3f, initPosZ + 7);
+        //piece = Instantiate(KnightBlack, target.position, target.rotation);
+        //piece.GetComponent<PieceController>().isWhite = false;
+        //piece.name = "Knight";
+        //piece.GetComponent<PieceController>().myX = 6;
+        //piece.GetComponent<PieceController>().myZ = 7;
 
-        // Create Bishop Black
-        target.position = new Vector3(initPosX + 2, 0.3f, initPosZ + 7);
-        piece = Instantiate(BishopBlack, target.position, target.rotation);
-        piece.GetComponent<PieceController>().isWhite = false;
-        piece.name = "Bishop";
-        piece.GetComponent<PieceController>().myX = 2;
-        piece.GetComponent<PieceController>().myZ = 7;
+        //// Create Bishop Black
+        //target.position = new Vector3(initPosX + 2, 0.3f, initPosZ + 7);
+        //piece = Instantiate(BishopBlack, target.position, target.rotation);
+        //piece.GetComponent<PieceController>().isWhite = false;
+        //piece.name = "Bishop";
+        //piece.GetComponent<PieceController>().myX = 2;
+        //piece.GetComponent<PieceController>().myZ = 7;
 
-        target.position = new Vector3(initPosX + 5, 0.3f, initPosZ + 7);
-        piece = Instantiate(BishopBlack, target.position, target.rotation);
-        piece.GetComponent<PieceController>().isWhite = false;
-        piece.name = "Bishop";
-        piece.GetComponent<PieceController>().myX = 5;
-        piece.GetComponent<PieceController>().myZ = 7;
+        //target.position = new Vector3(initPosX + 5, 0.3f, initPosZ + 7);
+        //piece = Instantiate(BishopBlack, target.position, target.rotation);
+        //piece.GetComponent<PieceController>().isWhite = false;
+        //piece.name = "Bishop";
+        //piece.GetComponent<PieceController>().myX = 5;
+        //piece.GetComponent<PieceController>().myZ = 7;
 
-        // Create Queen Black
-        target.position = new Vector3(initPosX + 3, 0.3f, initPosZ + 7);
-        piece = Instantiate(QueenBlack, target.position, target.rotation);
-        piece.GetComponent<PieceController>().isWhite = false;
-        piece.name = "Queen";
-        piece.GetComponent<PieceController>().myX = 3;
-        piece.GetComponent<PieceController>().myZ = 7;
+        //// Create Queen Black
+        //target.position = new Vector3(initPosX + 3, 0.3f, initPosZ + 7);
+        //piece = Instantiate(QueenBlack, target.position, target.rotation);
+        //piece.GetComponent<PieceController>().isWhite = false;
+        //piece.name = "Queen";
+        //piece.GetComponent<PieceController>().myX = 3;
+        //piece.GetComponent<PieceController>().myZ = 7;
 
         // Create King Black
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ + 7);

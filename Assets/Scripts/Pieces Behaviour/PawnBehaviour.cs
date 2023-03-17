@@ -19,7 +19,7 @@ public class PawnBehaviour : MonoBehaviour
         if (GetComponent<PieceController>().iAmSelected && GetComponent<PieceController>().isPainting)
         {
             PaintPawnMove();
-            GetComponent<PieceController>().isPainting = false;
+           // GetComponent<PieceController>().isPainting = false;
         }
     }
 

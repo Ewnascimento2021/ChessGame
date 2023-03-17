@@ -5,8 +5,10 @@ using UnityEngine;
 public class HousesBehaviour : MonoBehaviour
 {
     public GameObject myPiece = null;
+    public string myPieceName;
     public Transform house;
     public bool freePiece;
+    public bool freeCkeck;
     public bool isWhite;
     public int myHouseX;
     public int myHouseZ;
@@ -43,11 +45,13 @@ public class HousesBehaviour : MonoBehaviour
     {
         colorPiece = other.gameObject.tag;
         myPiece = other.gameObject;
+        myPieceName = other.gameObject.name;
     }
 
     private void OnCollisionExit(Collision other)
     {
         colorPiece = "Empty";
         myPiece = null;
+        myPieceName = null;
     }
 }

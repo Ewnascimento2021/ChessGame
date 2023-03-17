@@ -90,7 +90,6 @@ public class BoardController : MonoBehaviour
             piece.name = "Pawn";
             piece.GetComponent<PieceController>().myX = x;
             piece.GetComponent<PieceController>().myZ = 1;
-
         }
 
         // Create Rook White
@@ -108,43 +107,43 @@ public class BoardController : MonoBehaviour
         piece.GetComponent<PieceController>().myX = 7;
         piece.GetComponent<PieceController>().myZ = 0;
 
-        //// Create Knight White
-        //target.position = new Vector3(initPosX + 1, 0.3f, initPosZ);
-        //piece = Instantiate(KnightWhite, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = true;
-        //piece.name = "Knight";
-        //piece.GetComponent<PieceController>().myX = 1;
-        //piece.GetComponent<PieceController>().myZ = 0;
+        // Create Knight White
+        target.position = new Vector3(initPosX + 1, 0.3f, initPosZ);
+        piece = Instantiate(KnightWhite, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = true;
+        piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 1;
+        piece.GetComponent<PieceController>().myZ = 0;
 
-        //target.position = new Vector3(initPosX + 6, 0.3f, initPosZ);
-        //piece = Instantiate(KnightWhite, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = true;
-        //piece.name = "Knight";
-        //piece.GetComponent<PieceController>().myX = 6;
-        //piece.GetComponent<PieceController>().myZ = 0;
+        target.position = new Vector3(initPosX + 6, 0.3f, initPosZ);
+        piece = Instantiate(KnightWhite, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = true;
+        piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 6;
+        piece.GetComponent<PieceController>().myZ = 0;
 
-        //// Create Bishop White
-        //target.position = new Vector3(initPosX + 2, 0.3f, initPosZ);
-        //piece = Instantiate(BishopWhite, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = true;
-        //piece.name = "Bishop";
-        //piece.GetComponent<PieceController>().myX = 2;
-        //piece.GetComponent<PieceController>().myZ = 0;
+        // Create Bishop White
+        target.position = new Vector3(initPosX + 2, 0.3f, initPosZ);
+        piece = Instantiate(BishopWhite, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = true;
+        piece.name = "Bishop";
+        piece.GetComponent<PieceController>().myX = 2;
+        piece.GetComponent<PieceController>().myZ = 0;
 
-        //target.position = new Vector3(initPosX + 5, 0.3f, initPosZ);
-        //piece = Instantiate(BishopWhite, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = true;
-        //piece.name = "Bishop";
-        //piece.GetComponent<PieceController>().myX = 5;
-        //piece.GetComponent<PieceController>().myZ = 0;
+        target.position = new Vector3(initPosX + 5, 0.3f, initPosZ);
+        piece = Instantiate(BishopWhite, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = true;
+        piece.name = "Bishop";
+        piece.GetComponent<PieceController>().myX = 5;
+        piece.GetComponent<PieceController>().myZ = 0;
 
-        //// Create Queen White
-        //target.position = new Vector3(initPosX + 3, 0.3f, initPosZ);
-        //piece = Instantiate(QueenWhite, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = true;
-        //piece.name = "Queen";
-        //piece.GetComponent<PieceController>().myX = 3;
-        //piece.GetComponent<PieceController>().myZ = 0;
+        // Create Queen White
+        target.position = new Vector3(initPosX + 3, 0.3f, initPosZ);
+        piece = Instantiate(QueenWhite, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = true;
+        piece.name = "Queen";
+        piece.GetComponent<PieceController>().myX = 3;
+        piece.GetComponent<PieceController>().myZ = 0;
 
         // Create King White
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ);
@@ -167,6 +166,7 @@ public class BoardController : MonoBehaviour
             piece.GetComponent<PieceController>().myX = x;
             piece.GetComponent<PieceController>().myZ = +6;
         }
+
         // Create Rook Black
         target.position = new Vector3(initPosX, 0.3f, initPosZ + 7);
         piece = Instantiate(RookBlack, target.position, target.rotation);
@@ -182,43 +182,43 @@ public class BoardController : MonoBehaviour
         piece.GetComponent<PieceController>().myX = 7;
         piece.GetComponent<PieceController>().myZ = 7;
 
-        //// Create Knight Black
-        //target.position = new Vector3(initPosX + 1, 0.3f, initPosZ + 7);
-        //piece = Instantiate(KnightBlack, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = false;
-        //piece.name = "Knight";
-        //piece.GetComponent<PieceController>().myX = 1;
-        //piece.GetComponent<PieceController>().myZ = 7;
+        // Create Knight Black
+        target.position = new Vector3(initPosX + 1, 0.3f, initPosZ + 7);
+        piece = Instantiate(KnightBlack, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = false;
+        piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 1;
+        piece.GetComponent<PieceController>().myZ = 7;
 
-        //target.position = new Vector3(initPosX + 6, 0.3f, initPosZ + 7);
-        //piece = Instantiate(KnightBlack, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = false;
-        //piece.name = "Knight";
-        //piece.GetComponent<PieceController>().myX = 6;
-        //piece.GetComponent<PieceController>().myZ = 7;
+        target.position = new Vector3(initPosX + 6, 0.3f, initPosZ + 7);
+        piece = Instantiate(KnightBlack, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = false;
+        piece.name = "Knight";
+        piece.GetComponent<PieceController>().myX = 6;
+        piece.GetComponent<PieceController>().myZ = 7;
 
-        //// Create Bishop Black
-        //target.position = new Vector3(initPosX + 2, 0.3f, initPosZ + 7);
-        //piece = Instantiate(BishopBlack, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = false;
-        //piece.name = "Bishop";
-        //piece.GetComponent<PieceController>().myX = 2;
-        //piece.GetComponent<PieceController>().myZ = 7;
+        // Create Bishop Black
+        target.position = new Vector3(initPosX + 2, 0.3f, initPosZ + 7);
+        piece = Instantiate(BishopBlack, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = false;
+        piece.name = "Bishop";
+        piece.GetComponent<PieceController>().myX = 2;
+        piece.GetComponent<PieceController>().myZ = 7;
 
-        //target.position = new Vector3(initPosX + 5, 0.3f, initPosZ + 7);
-        //piece = Instantiate(BishopBlack, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = false;
-        //piece.name = "Bishop";
-        //piece.GetComponent<PieceController>().myX = 5;
-        //piece.GetComponent<PieceController>().myZ = 7;
+        target.position = new Vector3(initPosX + 5, 0.3f, initPosZ + 7);
+        piece = Instantiate(BishopBlack, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = false;
+        piece.name = "Bishop";
+        piece.GetComponent<PieceController>().myX = 5;
+        piece.GetComponent<PieceController>().myZ = 7;
 
-        //// Create Queen Black
-        //target.position = new Vector3(initPosX + 3, 0.3f, initPosZ + 7);
-        //piece = Instantiate(QueenBlack, target.position, target.rotation);
-        //piece.GetComponent<PieceController>().isWhite = false;
-        //piece.name = "Queen";
-        //piece.GetComponent<PieceController>().myX = 3;
-        //piece.GetComponent<PieceController>().myZ = 7;
+        // Create Queen Black
+        target.position = new Vector3(initPosX + 3, 0.3f, initPosZ + 7);
+        piece = Instantiate(QueenBlack, target.position, target.rotation);
+        piece.GetComponent<PieceController>().isWhite = false;
+        piece.name = "Queen";
+        piece.GetComponent<PieceController>().myX = 3;
+        piece.GetComponent<PieceController>().myZ = 7;
 
         // Create King Black
         target.position = new Vector3(initPosX + 4, 0.3f, initPosZ + 7);

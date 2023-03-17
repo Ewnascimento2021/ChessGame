@@ -39,7 +39,7 @@ public class RookBehaviour : MonoBehaviour
             RookIsMoving();
         }
 
-        //WhiteLeft
+        //WhiteLeftRook
         else if (gameObject.GetComponent<PieceController>().myX == 0 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked1 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX + 4, transform.position.y, transform.position.z);
@@ -48,7 +48,7 @@ public class RookBehaviour : MonoBehaviour
 
             ReferenceController.Instance.RookMoved1 = true;
         }
-        //WhiteRight
+        //WhiteRightRook
         else if (gameObject.GetComponent<PieceController>().myX == 7 && gameObject.GetComponent<PieceController>().myZ == 0 && ReferenceController.Instance.Rooked2 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX - 1, transform.position.y, transform.position.z);
@@ -58,7 +58,7 @@ public class RookBehaviour : MonoBehaviour
             ReferenceController.Instance.RookMoved2 = true;
         }
 
-        //BlackLeft
+        //BlackLeftRook
         else if (gameObject.GetComponent<PieceController>().myX == 0 && gameObject.GetComponent<PieceController>().myZ == 7 && ReferenceController.Instance.Rooked3 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX + 4, transform.position.y, transform.position.z);
@@ -67,7 +67,7 @@ public class RookBehaviour : MonoBehaviour
 
             ReferenceController.Instance.RookMoved3 = true;
         }
-        //BlackRight
+        //BlackRightRook
         else if (gameObject.GetComponent<PieceController>().myX == 7 && gameObject.GetComponent<PieceController>().myZ == 7 && ReferenceController.Instance.Rooked4 == true)
         {
             transform.position = new Vector3(gameObject.GetComponent<PieceController>().myX - 1, transform.position.y, transform.position.z);

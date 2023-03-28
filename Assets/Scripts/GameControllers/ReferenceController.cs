@@ -82,7 +82,7 @@ public class ReferenceController : MonoBehaviour
     private bool rooked3;
     public bool Rooked3 { get => rooked3; set => rooked3 = value; }
 
-    
+
     private bool rooked4;
     public bool Rooked4 { get => rooked4; set => rooked4 = value; }
 
@@ -99,13 +99,9 @@ public class ReferenceController : MonoBehaviour
         return false;
     }
 
-    public bool CheckKingCheck(int x, int z)
+    public string CheckTypePiece(int x, int z)
     {
-        if (board[x, z].GetComponent<HousesBehaviour>().myPieceName == "King")
-        {
-            return true;
-        }
-        return false;
+        return board[x, z].GetComponent<HousesBehaviour>().myPieceName;
     }
 
     public bool CheckColorPiece(int x, int z)
@@ -116,7 +112,6 @@ public class ReferenceController : MonoBehaviour
         }
         return false;
     }
-    
 
     public void PaintColor(int x, int z)
     {
@@ -129,7 +124,7 @@ public class ReferenceController : MonoBehaviour
         board[x, z].GetComponent<MeshRenderer>().material = redColor;
         board[x, z].GetComponent<HousesBehaviour>().freePiece = true;
     }
-    
+
     public void PaintKingCheck(int x, int z)
     {
         board[x, z].GetComponent<MeshRenderer>().material = yellowColor;
@@ -137,7 +132,6 @@ public class ReferenceController : MonoBehaviour
         board[x, z].GetComponent<HousesBehaviour>().freeCkeck = true;
 
     }
-
 
     public void ReturnColor()
     {
@@ -159,7 +153,18 @@ public class ReferenceController : MonoBehaviour
                 board[x, z].GetComponent<HousesBehaviour>().freePiece = false;
             }
         }
-
     }
+    public void ReturnColorKing(int x, int z)
+    {
+            if (board[x, z].GetComponent<HousesBehaviour>().isWhite == true)
+            {
+                board[x, z].GetComponent<MeshRenderer>().material = whiteColor;
+            }
+            else
+            {
+                board[x, z].GetComponent<MeshRenderer>().material = blackColor;
+            }
+    }
+
 
 }

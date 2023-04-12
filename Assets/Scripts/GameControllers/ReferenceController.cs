@@ -26,8 +26,16 @@ public class ReferenceController : MonoBehaviour
     public Material blueColor;
     public Material yellowColor;
     public Material chessMaterial;
+    public bool rotateCamera;
 
+    [SerializeField]
+    private GameObject blackCamera;
 
+    [SerializeField]
+    private GameObject whiteCamera;
+
+    [SerializeField]
+    private GameObject firstCamera;
 
 
     private void Start()
@@ -165,6 +173,19 @@ public class ReferenceController : MonoBehaviour
                 board[x, z].GetComponent<MeshRenderer>().material = blackColor;
             }
     }
+
+    public void RotateCamera()
+    {
+        if (rotateCamera)
+        {
+            firstCamera.transform.rotation = blackCamera.transform.rotation;
+        }
+        else
+        {
+            firstCamera.transform.rotation = whiteCamera.transform.rotation;
+        }
+    }
+
 
 
 }

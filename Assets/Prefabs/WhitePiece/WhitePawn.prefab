@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5911324553829798126}
   - component: {fileID: -8909173496704491907}
   - component: {fileID: 6115780175868145895}
+  - component: {fileID: 8603760707808130460}
   m_Layer: 0
   m_Name: WhitePawn
   m_TagString: WhitePiece
@@ -148,3 +149,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6730016ba0e329c499d89e81bd550346, type: 3}
+--- !u!114 &8603760707808130460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42847776a66bd540aad6594c25966c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -81,16 +81,16 @@ public class BoardController : MonoBehaviour
     {
         GameObject piece;
 
-        ////Create Pawn White
-        //for (int x = 0; x < 8; x++)
-        //{
-        //    target.position = new Vector3(initPosX + x, 0.2f, initPosZ + 1);
-        //    piece = Instantiate(PawnWhite, target.position, target.rotation);
-        //    piece.GetComponent<PieceController>().isWhite = true;
-        //    piece.name = "Pawn";
-        //    piece.GetComponent<PieceController>().myX = x;
-        //    piece.GetComponent<PieceController>().myZ = 1;
-        //}
+        //Create Pawn White
+        for (int x = 0; x < 8; x++)
+        {
+            target.position = new Vector3(initPosX + x, 0.2f, initPosZ + 1);
+            piece = Instantiate(PawnWhite, target.position, target.rotation);
+            piece.GetComponent<PieceController>().isWhite = true;
+            piece.name = "Pawn";
+            piece.GetComponent<PieceController>().myX = x;
+            piece.GetComponent<PieceController>().myZ = 1;
+        }
 
         // Create Rook White
         target.position = new Vector3(initPosX, 0.3f, initPosZ);
@@ -156,16 +156,16 @@ public class BoardController : MonoBehaviour
 
 
 
-        ////Create Pawn Black 
-        //for (int x = 0; x < 8; x++)
-        //{
-        //    target.position = new Vector3(initPosX + x, 0.2f, initPosZ + 6);
-        //    piece = Instantiate(PawnBlack, target.position, target.rotation);
-        //    piece.GetComponent<PieceController>().isWhite = false;
-        //    piece.name = "Pawn";
-        //    piece.GetComponent<PieceController>().myX = x;
-        //    piece.GetComponent<PieceController>().myZ = +6;
-        //}
+        //Create Pawn Black 
+        for (int x = 0; x < 8; x++)
+        {
+            target.position = new Vector3(initPosX + x, 0.2f, initPosZ + 6);
+            piece = Instantiate(PawnBlack, target.position, target.rotation);
+            piece.GetComponent<PieceController>().isWhite = false;
+            piece.name = "Pawn";
+            piece.GetComponent<PieceController>().myX = x;
+            piece.GetComponent<PieceController>().myZ = +6;
+        }
 
         // Create Rook Black
         target.position = new Vector3(initPosX, 0.3f, initPosZ + 7);

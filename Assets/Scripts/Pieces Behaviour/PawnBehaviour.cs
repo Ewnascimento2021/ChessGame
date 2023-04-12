@@ -7,7 +7,7 @@ public class PawnBehaviour : MonoBehaviour
 {
     private bool isFirstMovement;
     private int whiteOrBlackPawn = 1;
-   
+
 
     void Start()
     {
@@ -19,7 +19,6 @@ public class PawnBehaviour : MonoBehaviour
         if (GetComponent<PieceController>().iAmSelected && GetComponent<PieceController>().isPainting)
         {
             PaintPawnMove();
-           // GetComponent<PieceController>().isPainting = false;
         }
     }
 

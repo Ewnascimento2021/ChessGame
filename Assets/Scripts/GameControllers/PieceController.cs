@@ -17,6 +17,7 @@ public class PieceController : MonoBehaviour
     public int myZ;
     public bool isPainting = false;
     public bool firstMove;
+    
 
 
     private void Start()
@@ -71,6 +72,10 @@ public class PieceController : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().material = ReferenceController.Instance.chessMaterial;
         ReferenceController.Instance.BlackOrWhite = !ReferenceController.Instance.BlackOrWhite;
         ReferenceController.Instance.ReturnColor();
+        ReferenceController.Instance.rotateCamera = !ReferenceController.Instance.rotateCamera;
+        ReferenceController.Instance.RotateCamera();
+
+
     }
 
     private void cancelSelect()

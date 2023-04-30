@@ -17,13 +17,14 @@ public class HousesBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (ReferenceController.Instance.IsPieceSelected && houseEnter && Input.GetMouseButtonDown(0) && freePiece)
+        if (ReferenceController.Instance.IsPieceSelected)
         {
-            selectHouse();
+            if (houseEnter && Input.GetMouseButtonDown(0) && freePiece)
+            {
+                selectHouse();
+            }
         }
     }
-
-
     private void selectHouse()
     {
         ReferenceController.Instance.IsHouseSelected = true;

@@ -30,23 +30,27 @@ public class PieceController : MonoBehaviour
 
     void Update()
     {
-        if (isWhite && ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
-        {
-            SelectedPiece();
 
-        }
-        else if (!isWhite && !ReferenceController.Instance.BlackOrWhite && mouseEnter && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            SelectedPiece();
-        }
+            if (isWhite && ReferenceController.Instance.BlackOrWhite && mouseEnter)
+            {
+                SelectedPiece();
 
-        if (ReferenceController.Instance.IsHouseSelected && iAmSelected)
-        {
-            MovePieceSelected();
-        }
-        else if (iAmSelected && !mouseEnter && Input.GetMouseButtonDown(0))
-        {
-            cancelSelect();
+            }
+            else if (!isWhite && !ReferenceController.Instance.BlackOrWhite && mouseEnter)
+            {
+                SelectedPiece();
+            }
+
+            if (ReferenceController.Instance.IsHouseSelected && iAmSelected)
+            {
+                MovePieceSelected();
+            }
+            else if (iAmSelected && !mouseEnter)
+            {
+                cancelSelect();
+            }
         }
     }
 

@@ -95,7 +95,10 @@ public class ReferenceController : MonoBehaviour
     public bool Rooked4 { get => rooked4; set => rooked4 = value; }
 
 
+    private bool autoCheckXPlusZPlus;
+    public bool AutoCheckXPlusZPlus { get => autoCheckXPlusZPlus; set => autoCheckXPlusZPlus = value; }
 
+    
 
 
     public bool CheckEmpty(int x, int z)
